@@ -1,0 +1,70 @@
+<?php
+
+$product = $block->getProduct();
+
+?>
+<style>
+.benefits-badge{max-width:600px;margin-top:40px}
+.benefits-badge-holder{max-height:120px; text-align:center}
+.benefits-badge-holder img{width:50%;height:50%}
+.benefits-text{text-align:center;margin-top:20px; text-transform:uppercase}
+.block.related .action.select {display:none}
+
+@media screen and (max-width:767px){
+    .benefits-badge .col-3{padding:0}
+    .benefits-text p{font-size:0.9rem}
+
+}
+
+    </style>
+<div class="row benefits-badge">
+<?php if (!empty($product->getData('benefit_badge_1'))): ?>
+    <div class="col-3">
+
+        <div class="benefits-badge-holder">
+            <img src="/media/catalog/product<?php echo $product->getData('benefit_badge_1'); ?>" alt="">
+        </div>
+        <div class="benefits-text">
+        <p><?php echo $product->getData('benefit_badge_text_1'); ?></p>
+        </div>
+    </div>
+    <?php endif ?>
+
+    <?php if (!empty($product->getData('benefit_badge_2'))): ?>
+    <div class="col-3">
+        
+        <div class="benefits-badge-holder">
+            <img src="/media/catalog/product<?php echo $product->getData('benefit_badge_2'); ?>" alt="">
+        </div>
+        <div class="benefits-text">
+       <p> <?php echo $product->getData('benefit_badge_text_2'); ?></p>
+        </div>
+    </div>
+    <?php endif ?>
+
+    <?php if (!empty($product->getData('benefit_badge_3'))): ?>
+    <div class="col-3">
+  
+        <div class="benefits-badge-holder">
+        <img src="/media/catalog/product<?php echo $product->getData('benefit_badge_3'); ?>" alt="">
+        </div>
+        <div class="benefits-text">
+         <p>   <?php echo $product->getData('benefit_badge_text_3'); ?></p>
+        </div>
+        </div>
+        <?php endif ?>
+
+        <?php if (!empty($product->getData('benefit_badge_4'))): ?>
+    <div class="col-3">
+        
+        <div class="benefits-badge-holder">
+        <img src="/media/catalog/product<?php echo $product->getData('benefit_badge_4'); ?>" alt="">
+        </div>
+        <div class="benefits-text">
+        <p><?php echo $product->getData('benefit_badge_text_4'); ?></p>
+        </div>
+    </div>
+    <?php endif ?>
+
+</div>
+

@@ -1,0 +1,39 @@
+<?php
+
+$product = $block->getProduct();
+$moment = $product->getAttributeText('moment_select');
+$momentcurve ="";
+if ($moment == "Focus"){
+    $momentcurve = $this->getViewFileUrl("images/product-bell-curve-focus.png");
+}
+if ($moment == "Balance"){
+    $momentcurve = $this->getViewFileUrl("images/product-bell-curve-balance.png");
+}
+if ($moment == "Amplify"){
+    $momentcurve = $this->getViewFileUrl("images/product-bell-curve-amplify.png");
+}
+?>
+
+
+<div class ="row price-mg-moment">
+ <div class="col-3">
+<p class="pricemoment">&pound;<?php echo str_replace(".000000","",($product->getData('price')));?> </p>
+</div>
+        <div class="col-3 cbdquantity">
+            <p class="pricemoment"><?php echo $product->getData('cbd_quantity_mg');?>mg CBD</p>
+    </div>
+    <div class="col-6">
+        <div class="row">
+            <div class="col-6">
+            <p ><?php echo $moment;?></p>
+            </div>
+            <div class="col-6">
+         
+            
+
+            <img src="<?php echo $momentcurve; ?>" alt="oto moment curve" />
+            </div>
+        
+        </div>      
+    </div>
+</div>

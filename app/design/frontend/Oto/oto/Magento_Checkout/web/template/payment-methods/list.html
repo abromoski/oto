@@ -1,0 +1,31 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ -->
+
+
+<div if="isPaymentMethodsAvailable()" class="items payment-methods">
+
+
+
+
+     <div repeat="foreach: paymentGroupsList, item: '$group'" class="payment-group">
+          <div if="getRegion($group().displayArea)().length" translate="getGroupTitle($group)" class="step-title"
+               data-role="title">
+          </div>
+          <each args="data: getRegion($group().displayArea), as: 'method'" render="" />
+     </div>
+
+
+</div>
+
+<div ifnot="isPaymentMethodsAvailable()" class="no-payments-block" translate="'No Payment Methods'">
+
+
+</div>
+<div class="payment-message">
+     <p>Call us on 0203 963 5955 during office hours (9am - 5pm Monday to Friday) if you need any assistance.</p>
+     <p>Alternatively email us at <a href="mailto:info@otocbd.com?subject=Payment Help">info@otocbd.com</a>.</p>
+</div>

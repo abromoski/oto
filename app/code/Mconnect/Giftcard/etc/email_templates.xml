@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="giftcard_email_giftcard_template" label="Send Gift Card" file="giftcard_template.html" type="html" module="Mconnect_Giftcard" area="frontend"/>    
+    <template id="giftcard_email_expiry_template" label="Expiry Notification" file="expiry_template.html" type="html" module="Mconnect_Giftcard" area="frontend"/>    
+    <template id="giftcard_email_sender_confirmation_template" label="Sender Confirmation Email" file="sender_confirmation.html" type="html" module="Mconnect_Giftcard" area="frontend"/>
+	<template id="giftcard_email_notify_recipient_refunds_template" label="Recipient Refunds Email" file="notify_recipient_refunds.html" type="html" module="Mconnect_Giftcard" area="frontend"/>
+</config>

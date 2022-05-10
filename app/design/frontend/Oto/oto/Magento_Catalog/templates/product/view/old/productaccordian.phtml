@@ -1,0 +1,153 @@
+<?php
+
+$product = $block->getProduct();
+$moment = $product->getAttributeText('moment_select');
+$sku = $product->getSku();
+?>
+
+
+
+<div id="accordion" class="faq">
+
+<div class="card ">
+  <div class="card-header"   data-toggle="collapse"   href="#menuone" >
+<a class="card-link  <?php echo $moment; ?>" id="sdescription" data-toggle="collapse"  href="#menuone" aria-expanded="true" aria-controls="menuone"  class="collapsed">What it is?<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menuone" class="collapse show">
+    <div class="card-body">
+    <p><?php echo $product->getData('description'); ?></p>
+          
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<?php if (!empty($product->getData('product_PRESS'))): ?>
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu10" aria-expanded="true" aria-controls="menu10">Press<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu10" class="collapse show">
+    <div class="card-body">
+      <div class="product-press-content"><?php echo $product->getData('product_PRESS'); ?>
+</div>
+    </div>
+  </div>
+</div>
+
+<?php endif ?>
+
+<?php if (!empty($product->getData('product_highlights_main'))): ?>
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu15" aria-expanded="true" aria-controls="menu15">Why it's so Special<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu15" class="collapse show">
+    <div class="card-body">
+    <?php echo $product->getData('product_highlights_main'); ?>
+</div>
+    </div>
+  </div>
+</div>
+
+<?php endif ?>
+
+
+
+
+
+
+<div class="card highlights">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu6" aria-expanded="false" aria-controls="menu6">Ingredients<span class="collapsed"><p><b>&plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu6" class="collapse">
+    <div class="card-body">
+    <h4 class="product-highlight-title">CBD</h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_cbd_descrip'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_1'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_1'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_2'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_2'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_3'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_3'); ?></p>
+<p><?php echo $product->getData('product_ingredients'); ?></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menutwo" aria-expanded="false" aria-controls="menutwo">How to Use<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menutwo" class="collapse show">
+    <div class="card-body">
+<p><?php echo $product->getData('how_to_use'); ?></p>
+    </div>
+  </div>
+</div>
+
+
+    
+
+<div class="card ">
+  <div class="card-header"   data-toggle="collapse"   href="#menu7" >
+<a class="card-link  <?php echo $moment; ?>"  data-toggle="collapse"  href="#menu7" aria-expanded="true" aria-controls="menu7"  class="collapsed">Reviews<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu7" class="collapse show">
+    <div class="card-body">
+
+    <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5763bccae0a06d08e809ecbb" data-businessunit-id="5d41beda58361a0001deda01" data-style-height="700px" data-style-width="100%" data-theme="light" data-sku="<?php echo $sku;?>" data-star-color="#00b67a" data-font-family="Montserrat" data-no-reviews="hide">
+  <a href="https://uk.trustpilot.com/review/otocbd.com" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+
+
+    <div>
+
+
+    </div>
+          
+    </div>
+  </div>
+</div>
+
+   
+  
+
+
+  
+
+</div>
+<div>
+  <p class="thcfree">This product contains 0% THC</p>
+</div>
+
+<style>
+
+.block-actions, .thcfree {
+    text-align: center;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    list-style-position: outside;
+    font-size: 1.4rem;
+    padding-left: 20px;
+}
+
+</style>

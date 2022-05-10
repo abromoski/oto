@@ -1,0 +1,38 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   
+    
+    
+    <body>
+
+
+   
+             
+               <referenceContainer name="category.view.container" htmlClass="category-view row" />
+              <referenceBlock name="category.image">
+  <arguments>
+    <argument name="css_class" xsi:type="string">category-image col-md-6</argument>
+   
+  </arguments>
+</referenceBlock>
+
+  
+
+    <referenceContainer name="category.view.container">
+    <container name="banner.caption-holder" htmlTag="div"  htmlClass="banner-caption-holder col-md-6" before="-" />
+   
+    
+</referenceContainer>
+
+  <referenceContainer name="category.view.container">
+    <container name="banner.caption" htmlTag="div"  htmlClass="banner-caption" after="-" />
+</referenceContainer>
+
+
+
+
+ 
+    <move element="category.description" destination="banner.caption" after="-"  />
+    <move element="page.main.title" destination="banner.caption" before ="-"  />
+
+        </body>
+        </page>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Catalog/etc/product_types.xsd">
+    <type name="giftcardproduct" label="Gift Card Product" modelInstance="Mconnect\Giftcard\Model\Product\Type\Giftcard" indexPriority="25" sortOrder="25" composite="false" isQty="true" canUseQtyDecimals="false">
+		<priceModel instance="Mconnect\Giftcard\Model\Product\Type\Giftcard\Price" />
+        <customAttributes>
+			<attribute name="refundable" value="false"/>
+            <attribute name="taxable" value="true"/>
+        </customAttributes>
+    </type>
+</config>

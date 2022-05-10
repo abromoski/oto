@@ -1,0 +1,26 @@
+{
+    "name": "magetracer/module-zottopay",
+    "description": "Accept payments using Zottopay payment gateway",
+    "type": "magento2-module",
+    "version": "2.0.2",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+	"authors": [
+    {
+      "name": "MageTracer",
+      "email": "tracermage@gmail.com",
+      "homepage": "https://www.magetracer.com",
+      "role": "Leader"
+    }
+	],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magetracer\\Zottopay\\": ""
+        }
+    }
+}

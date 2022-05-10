@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Etatvasoft_Banner::elements" title="Banners" module="Etatvasoft_Banner" resource="Etatvasoft_Banner::elements" sortOrder="20"/>
+        <add id="Etatvasoft_Banner::banner" title="Manage Banners" module="Etatvasoft_Banner" resource="Etatvasoft_Banner::banner" parent="Etatvasoft_Banner::elements" sortOrder="1" action="banner/banner/" />
+    </menu>
+</config>

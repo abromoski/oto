@@ -1,0 +1,17 @@
+<?php
+  $helper = $this->helper('PowerReviews\ReviewDisplay\Helper\Data');
+?>
+
+<div id="pr-write"></div>
+<script>
+POWERREVIEWS.display.render({
+          api_key: "<?= $helper->getApiKey(); ?>",
+          locale: "<?= $helper->getLocale(); ?>",
+          merchant_group_id: "<?= $helper->getMerchantGroupId(); ?>",
+          merchant_id: "<?= $helper->getMerchantId(); ?>",
+style_sheet: "https://otocbd.com/media/css/pr.css",
+    components: {
+      Write: 'pr-write'
+    }
+  });
+</script>

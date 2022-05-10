@@ -1,0 +1,141 @@
+<?php
+/**
+ * Copyright � Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php $buttonTitle = __('Add to Bag'); ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="box-tocart">
+    <div class="fieldset">
+       
+        <div class="actions">
+            <div class="image-centred-button-product ">
+                
+            
+                
+               <?php $attribute_value = $_product->getAttributeText('moment_select'); 
+                if ($attribute_value=="Focus"){?>
+                 <img src="<?php echo $block->getViewFileUrl("Magento_Theme::images/focus-background.jpg");?>" alt="focus button background" />
+          <?php }
+                 elseif ($attribute_value=="Amplify"){?>
+              <img src="<?php echo $block->getViewFileUrl("Magento_Theme::images/amplify-background.jpg");?>" alt="amplify button background" />
+             <?php  }
+                 elseif ($attribute_value=="Balance"){?>
+                 <img src="<?php echo $block->getViewFileUrl("Magento_Theme::images/balance-background.jpg");?>" alt="balance button background" />
+           <?php }
+                
+                
+                ?>
+            
+                
+                
+               
+                
+            
+                <div class="button-qty-holder">
+                    
+                     <button type="submit"
+                    title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
+                    class="action primary tocart button-white focus btn btn-default"
+                    id="product-addtocart-button">
+                <span><?= /* @escapeNotVerified */ $buttonTitle ?></span>
+              
+            </button>
+                    
+                    
+            <?php if ($block->shouldRenderQuantity()): ?>
+        <div class="field qty <?php echo $_product->getAttributeText('moment_select'); ?>">
+            <label class="label" for="qty"><span><?php /* @escapeNotVerified */ echo __('Qty:') ?></span></label>
+            
+            <div id="custom-qty" class="control" data-bind="scope: 'qty-counter'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <script type="text/x-magento-init">
+                    {
+                        "#custom-qty": {
+                            "Magento_Ui/js/core/app": {
+                                "components": {
+                                    "qty-counter": {
+                                        "component": "qty-counter",
+                                        "config": {
+                                            "qty": <?php echo $block->getProductDefaultQty() * 1 ?>,
+                                            "dataValidate": <?php echo json_encode($block->getQuantityValidators()) ?>
+                                        }
+                                    }
+                                 }
+                            }
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <?php endif; ?>            
+              
+                    
+            
+          
+            </div>
+              </div>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+
+</div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>
+
+<script>
+'use strict';
+
+define([
+    'ko',
+    'uiElement'
+], function (ko, Element) {
+    return Element.extend({
+        defaults: {
+            template: 'Magento_Catalog/input-counter'
+        },
+
+        initObservable: function () {
+            this._super()
+                .observe('qty');
+
+            return this;
+        },
+
+        getDataValidator: function() {
+            return JSON.stringify(this.dataValidate);
+        },
+
+        decreaseQty: function() {
+            var qty;
+
+            if (this.qty() > 1) {
+                qty = this.qty() - 1;
+            } else {
+                qty = 1;
+            }
+
+            this.qty(qty);
+        },
+
+        increaseQty: function() {
+            var qty = this.qty() + 1;
+
+            this.qty(qty);
+        }
+    });
+});
+
+</script>

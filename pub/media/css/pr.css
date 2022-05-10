@@ -1,0 +1,446 @@
+.p-w-r .pr-snippet .pr-snippet-stars-png .pr-snippet-rating-decimal {
+display:none;
+}
+
+ .p-w-r .pr-star-v4-0-filled {
+    background-image: url("https://otocbd.com/pub/media/icon-ratings-star-outline.svg") ;
+
+
+}
+
+.p-w-r .pr-star-v4-25-filled{
+    background-image: url("https://otocbd.com/pub/media/icon-ratings-star-25-01.svg") ;
+
+}
+
+.p-w-r .pr-star-v4-75-filled{
+    background-image: url("https://otocbd.com/pub/media/icon-ratings-star-25-01.svg") ;
+
+}
+
+.p-w-r .pr-star-v4-50-filled{
+    background-image: url("https://otocbd.com/pub/media/icon-ratings-star-half.svg") ;
+
+}
+
+.p-w-r  .pr-star-v4-100-filled{
+
+ background-image: url("https://otocbd.com/pub/media/icon-ratings-star-full.svg") ;
+ }
+
+
+.pwr-category-snippets .pr-star-v4-100-filled, .pwr-category-snippets .pr-star-v4-50-filled, .pwr-category-snippets .pr-star-v4-0-filled{
+height:15px;
+width:15px;
+
+}
+
+
+
+.pr-snippet-stars-reco-reco {
+    display: none !important;
+}
+
+
+
+.p-w-r a {
+
+    
+    color: black;
+    text-decoration: underline;
+}
+
+a.pr-snippet-write-review-link.pr-underline {
+    display: none;
+}
+
+.pr-snippet-stars-reco-reco{
+    display:none;
+}
+
+.p-w-r .pr-review-snapshot .pr-ratings-histogram .pr-ratings-histogram-barValue {
+    background: black
+
+}
+
+ .p-w-r .pr-review-snapshot .pr-ratings-histogram .pr-hist-filter-5 .pr-ratings-histogram-barValue{
+     background-color: black;
+
+ }
+
+
+
+.p-w-r .pr-review-snapshot.pr-review-enhanced.pr-snapshot-mobile .pr-review-snapshot-header .pr-review-snapshot-header-intro .pr-headline {
+    font-size: 33px;
+    display: none;
+}
+
+
+.p-w-r .pr-review-snapshot.pr-snapshot-mobile .pr-review-snapshot-simple .pr-snippet-read-and-write {
+    text-align: center;
+}
+
+.p-w-r .pr-snippet-stars-container div{
+
+    text-align:center;
+}
+
+.p-w-r .pr-review-display .pr-rd-content-block div{
+    text-align:left;
+
+}
+
+.p-w-r .pr-helpful-active {
+    background: gray !important;
+}
+
+
+
+.p-w-r .pr-review-snapshot .pr-snippet-rating-decimal {
+    border: none;
+
+}
+.p-w-r .pr-helpful-btn{
+    border:none;
+}
+
+.p-w-r .pr-rd-flag-review-btn{
+    color:black;
+}
+
+.pr-review-display a {
+    color: black;
+
+}
+
+.p-w-r .pr-accessible-btn, .p-w-r .pr-review-snapshot .pr-review-snapshot-simple .pr-review-snapshot-snippets .pr-snippet-read-and-write a {
+  
+    color: #fff;
+    background-color: black;
+    border:none;
+    width:275px;
+}
+
+
+
+    .p-w-r .pr-review-snapshot.pr-snapshot-mobile .pr-review-snapshot-simple .pr-snippet-reco-to-friend {
+    display:none;
+}
+
+.p-w-r .pr-review-display .pr-rd-main-header-with-filters .pr-rd-review-header-contents {
+display:none
+}
+
+.p-w-r body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #666;
+    background-color: #fff;
+}
+
+.p-w-r .ryp-purchase {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 35px;
+    background-color: #fff;
+
+}
+
+.p-w-r {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+
+}
+
+.p-w-r body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #666;
+    background-color: #fff;
+}
+
+.p-w-r .pr-review-snapshot .pr-review-snapshot-header-intro{
+
+    border-bottom:0;
+}
+
+
+
+
+.pr-review-snippet-container.pr-no-reviews  div:not(.pr-snippet-read-and-write) div {
+ display:none
+}
+
+.p-w-r .pr-review-snapshot.pr-snapshot-mobile .pr-review-snapshot-simple .pr-review-snapshot-snippets {
+    text-align: center;
+}
+
+
+.p-w-r .pr-review-display .pr-snippet-rating-decimal{
+    border:none;
+
+}
+
+.pr-review-display a {
+    color:black}
+
+    .pwr-category-snippets .pr-no-reviews{
+        display:none;
+    }
+
+    .p-w-r .pr-category-snippet__total {
+        padding-left: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    .p-w-r .pr-review-display a {
+        color: black;
+
+    }
+
+    .p-w-r .pr-btn-fileinput {
+color:black;
+    }
+
+    .p-w-r .pr-war {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .pr-star-v4.pr-star-v4-0-filled {
+        background-image: url("https://otocbd.com/pub/media/icon-ratings-star-outline.svg");
+    }
+
+  .pr-star-v4.pr-star-v4-100-filled{
+
+        background-image: url("https://otocbd.com/pub/media/icon-ratings-star-full.svg") ;
+        }
+
+
+
+        .p-w-r .btn-group-radio-horizontal-linked input + label.pr-btn:last-of-type, .p-w-r .btn-group-radio-horizontal .pr-btn + input + label.pr-btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .p-w-r .btn-group-radio-horizontal-linked .pr-btn + input + label.pr-btn, .p-w-r .btn-group-radio-horizontal .pr-btn + input + label.pr-btn {
+            border-left: 0;
+        }
+        .p-w-r .btn-group-radio-horizontal-linked.btn-toggle > :last-child, .p-w-r .btn-group-radio-horizontal.btn-toggle > :last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .p-w-r .btn-group-radio-horizontal-linked .pr-btn, .p-w-r .btn-group-radio-horizontal .pr-btn {
+            white-space: normal;
+            display: table-cell;
+        }
+        .p-w-r .btn-group .pr-btn {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .p-w-r input + label.pr-btn {
+            width: 100%;
+        }
+        .p-w-r .btn-group-radio-horizontal-linked .pr-btn {
+        border-top:none;
+        border-bottom:none;
+        }
+        
+        .p-w-r .pr-accessible-btn{
+        
+            color:white;
+            border-bottom:0
+        }
+        
+        .p-w-r .btn-group-radio-horizontal-linked input + label.pr-btn:first-of-type {border-left:none;}
+        .p-w-r .btn-group-radio-horizontal-linked input + label.pr-btn:last-of-type {border-right:none;}
+        
+        .writereview-index-index .page-main > .page-title-wrapper .page-title {
+            display: block;
+            text-align: center;
+        }
+
+
+.p-w-r .pr-snippet div, .p-w-r .pr-snippet span {
+    vertical-align: baseline;
+}
+
+.p-w-r .pr-snippet-stars-reco-inline {
+    width: 100%;
+    text-align:center;
+}
+
+.p-w-r .pr-review-snapshot .pr-review-snapshot-block .pr-review-snapshot-histogram {
+    margin-bottom: 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p-w-r .pr-review-snapshot.pr-review-enhanced .pr-review-snapshot-header {
+    padding: 0 10px;
+    display: none;
+}
+
+.p-w-r .pr-review-snapshot .pr-review-snapshot-simple .pr-review-snapshot-block-recommend {
+    margin-right: 0;
+    display: none;
+}
+
+.p-w-r .pr-review-snapshot.pr-review-enhanced .pr-review-snapshot-simple .pr-review-snapshot-block {
+    flex: none;
+    width: 50%;
+}
+
+.p-w-r .pr-review-snapshot.pr-snapshot-mobile .pr-review-snapshot-simple .pr-snippet-rating-decimal {
+    display: block;
+    font-weight: bold;
+}
+
+.p-w-r .pr-review-display .pr-rd-content-block .pr-snippet-rating-decimal {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.p-w-r .pr-review-display .pr-rd-inner-side-content-block .pr-rd-details, .p-w-r .pr-review-display .pr-rd-side-content-block .pr-rd-details {
+    font-size: 11px;
+    color: #767676;
+}
+
+.p-w-r .pr-read-review .pr-rd-review-headline, .p-w-r .pr-review-display .pr-rd-review-headline {
+    font-weight: 600;
+    color: #303533;
+    font-size: 1.143em;
+    line-height: 1.3;
+    margin: 10px 0 0;
+}
+
+.p-w-r .pr-rd-bold {
+  
+    font-weight: 600;
+}
+
+.p-w-r .pr-helpful-btn {
+    vertical-align: middle;
+    margin: 5px 0;
+}
+
+.p-w-r button {
+   
+    font-size: 12px;
+}
+
+.p-w-r .pr-review-display .pr-rd-bottomline {
+    margin-bottom: 5px;
+}
+
+.p-w-r .pr-review-display .pr-rd-content-block {
+    margin-bottom: 5px;
+ 
+}
+
+.p-w-r .pr-review-display .pr-rd-inner-side-content-block{
+    margin-bottom: 5px;
+}
+.p-w-r .pr-review-display .pr-rd-pagination {
+    padding: 10px 0;
+    border-top: none;
+    border-bottom: none;
+
+}
+
+.p-w-r .form-control {
+box-shadow: none;
+}
+
+.p-w-r .btn-group-radio-vertical input+label.pr-btn:last-of-type {
+  
+    border-bottom-width: 1px;
+}
+
+.p-w-r legend.pr-control-label {
+font-weight:600;
+}
+
+.p-w-r label {
+   
+    font-weight: 600;
+}
+
+.p-w-r .pr-star-v4, .p-w-r .pr-star-v4-0-filled{
+    width: 40px;
+    height: 40px;
+}
+
+
+.p-w-r .pr-snippet div, .p-w-r .pr-snippet span {
+    margin-bottom:-2px;
+    
+    }
+    
+    .p-w-r .pr-snippet .pr-snippet-stars-png .pr-star-v4-100-filled {
+        margin-bottom:-2px;
+    }
+        
+    .price-mg-moment {
+        margin-bottom: 1.5rem;
+    }
+
+    #pr-reviewsnippet .p-w-r {
+        margin:0 0
+        
+        }
+        
+        
+        #pwr-snippets {
+        
+            margin-bottom: 4rem;
+        
+        }
+        
+        
+        fieldset#pr-value, fieldset#pr-quality, .form-group.pr-media_image-form-group,.form-group.pr-media_videourl-form-group {
+        
+            display: none;
+        }
+        
+       
+        .writereview-index-index .page-title-wrapper{display:none}
+
+
+
+.p-w-r .pr-header {
+ border-bottom:0;   
+    
+}
+
+@media all and (max-width: 767px){
+
+.p-w-r .pr-header {
+    border-bottom: 0;
+    margin-top: 60px;
+}
+
+#pr-write .p-w-r {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+}
+
+div#pr-write {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}

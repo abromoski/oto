@@ -1,0 +1,15 @@
+<!--@subject {{trans "Your Giftcard has beed delivered" store_name=$store.getFrontendName()}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <p class="greeting">Hello {{var sender_name|escape}},</p>
+			<br/>
+            <p>We have successfully sent your gift card to {{var recipient_name|escape}}</p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

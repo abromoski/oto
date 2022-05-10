@@ -1,0 +1,64 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Amp
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+<div class="footer-container">
+   <div class="fys">
+        <div class="fys__wrapper">
+            <div class="fys__panel fys__panel--left"    data-aos="left-panel-slide"  data-aos-duration="2000">
+            </div> 
+            <div class="fys__prize">
+                <div class="Show">
+                <img src="https://optalife.com/pub/media/oto-logo-small-white.png" alt="" style="text-align:center;" />
+                </div>
+            </div>           
+            <div class="fys__panel fys__panel--right"  data-aos="right-panel-slide"  data-aos-duration="2000">
+            </div>
+        </div> 
+    </div> <!-- fys__wrapper -->
+ <!-- fys -->
+
+
+<div class="footer">
+<?php echo $block->getChildHtml() ?>
+
+<div class="newsletter-form">
+ <form class="form-footer my-3" action-xhr="https://otocbd.com/newsletter/subscriber/new/" method="POST"  data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+					   <label for="MERGE0" class=" newsletter-label" >Free Trials. Pre-orders. News. Events. Meet us. </label>
+                    <input type="hidden" name="u" value="9ff1aca8defe3aa30de4c4903">
+                    <input type="hidden" name="id" value="fe5da7af93">
+                <div class="submit-wrapper">
+                      <input type="text"  placeholder="Enter your email." name="email" type="email" id="newsletter"
+                           placeholder="Enter your email address"
+                           data-mage-init='{"mage/trim-input":{}}'
+                           data-validate="{required:true, 'validate-email':true}" >
+                      <input type="submit" class="btn-footer" value="Submit" >
+                </div>
+					   <p>Always Private. Never shared.</p>
+                    <!--  <a href="contact" class="btn-footer"> Contact Us</a> --></div>
+                   </form>
+           </div>
+      
+
+ </div>
+</div> 
+
+<div class="footer-copyright">
+        <address >These products have not been evaluated by the MHRA and are not intended to diagnose, treat or cure any disease. Cannabidiol (CBD) is a natural constituent of hemp oil. There is no trace of THC in any of our products. <?php /* @escapeNotVerified */ echo $block->getCopyright() ?></address>
+        </div>
+</div>
+

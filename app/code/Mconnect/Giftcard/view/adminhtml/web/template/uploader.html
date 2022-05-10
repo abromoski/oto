@@ -1,0 +1,60 @@
+<div class="image image-placeholder" 
+		data-mage-init='{
+			"Mconnect_Giftcard/js/media-uploader" : {
+				"maxFileSize": 512,
+				"maxWidth": 1920,
+				"maxHeight": 1200
+			}
+		}'>
+	<input class="admin__control-text" type="hidden" data-form-part="product_form"
+       data-bind="
+        value: value,
+        hasFocus: focused,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': noticeId,
+            id: uid,
+			mediaurl: mediaurl
+    }"/>
+	<div class="uploader" 
+		data-bind="attr: {
+			id: 'image'+uid
+		}"
+	>
+		<div class="fileinput-button form-buttons button">
+			<span>Browse Files...</span>
+			<input type="file" name="image"				
+				data-bind="attr: {
+					'data-url': uploadurl,
+					id: 'file-'+uid
+				}" />
+		</div>
+		<div class="clear"></div>
+		<div class="product-image-wrapper">
+			<p class="image-placeholder-text">Browse to find or drag image here</p>
+		</div>
+	</div>
+	
+	<script id="image-template" type="text/x-magento-template" data-template="image">
+		<div class="item<% if (data.disabled == 1) { %> hidden-for-front<% } %>" data-role="gcimage">
+			
+			<div class="giftcard-image-wrapper">
+				<img class="product-image"
+					 data-role="image-element"
+					 src="<%- data.url %>"
+					 alt="<%- data.label %>"/>
+
+				<div class="actions">
+					<button type="button"
+							class="action-remove"
+							data-role="delete-button"
+							title="Delete image">
+					<span>Delete image</span>
+					</button>					
+				</div>
+				<div class="image-fade"><span>Hidden</span></div>
+			</div>
+		</div>
+	</script>
+</div>

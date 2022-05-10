@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+<meta name="description" content="Contact OTO via phone, email or contact form if you have any questions about our products or CBD in general" />
+  <link rel="canonical" src="otocbd.com/contact/index/" src_type="url"/>
+</head>
+ </page>

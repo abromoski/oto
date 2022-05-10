@@ -1,0 +1,148 @@
+<?php
+
+$product = $block->getProduct();
+$moment = $product->getAttributeText('moment_select');
+
+?>
+
+
+
+<div id="accordion" class="faq">
+
+<div class="card ">
+  <div class="card-header"   data-toggle="collapse"   href="#menuone" >
+<a class="card-link  <?php echo $moment; ?>" id="sdescription" data-toggle="collapse"  href="#menuone" aria-expanded="true" aria-controls="menuone"  class="collapsed">Description<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menuone" class="collapse show">
+    <div class="card-body">
+    <p><?php echo $product->getData('description'); ?></p>
+          
+    </div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menutwo" aria-expanded="false" aria-controls="menutwo">How to Use<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menutwo" class="collapse">
+    <div class="card-body">
+<p><?php echo $product->getData('how_to_use'); ?></p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu6" aria-expanded="false" aria-controls="menu6">Product Highlights<span class="collapsed"><p><b>&plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu6" class="collapse">
+    <div class="card-body">
+    <h4 class="product-highlight-title">CBD</h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_cbd_descrip'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_1'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_1'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_2'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_2'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_3'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_3'); ?></p>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu5" aria-expanded="false" aria-controls="menu5">Why OTO?<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu5" class="collapse">
+    <div class="card-body">
+    <h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_1'); ?></h4>
+    <p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_1'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_2'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_2'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_3'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_3'); ?></p>
+<h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_4'); ?></h4>
+<p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_4'); ?></p>
+    </div>
+  </div>
+</div>
+
+<?php if (!empty($product->getData('product_PRESS'))): ?>
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu5" aria-expanded="false" aria-controls="menu5">Press<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu5" class="collapse">
+    <div class="card-body">
+      <div class="product-press-content"><?php echo $product->getData('product_Press'); ?></h4>
+</div>
+    </div>
+  </div>
+</div>
+
+<?php endif ?>
+
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu4" aria-expanded="false" aria-controls="menu4">Testimonials<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu4" class="collapse">
+    <div class="card-body">
+
+<?php
+if (!empty($product->getData('testimonial_quote_1'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_1'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_1'); ?></span></p>
+<?php } 
+if (!empty($product->getData('testimonial_quote_2'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_2'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_2'); ?></span></p>
+    <?php } 
+    if (!empty($product->getData('testimonial_quote_3'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_3'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_3'); ?></span></p>
+    <?php } 
+    if (!empty($product->getData('testimonial_quote_4'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_4'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_4'); ?></span></p>
+    <?php } ?>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header">
+<a class="card-link  <?php echo $moment; ?>" data-toggle="collapse"  href="#menu3" aria-expanded="false" aria-controls="menu3">Ingredients<span class="collapsed"><p><b> &plus;</b></p></span>
+<span class="expanded"><p><b>&minus;</b></p></span></a>
+  </div>
+  <div id="menu3" class="collapse">
+    <div class="card-body">
+          <p><?php echo $product->getData('product_ingredients'); ?></p>
+    </div>
+  </div>
+</div>
+    
+
+
+
+   
+  
+
+
+  
+
+</div>

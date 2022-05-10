@@ -1,0 +1,22 @@
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- <referenceContainer name="amp.category.view.container">
+            <container name="banner.caption-holder" htmlTag="div"  htmlClass="banner-caption-holder col-md-6" before="-" />    
+        </referenceContainer>-->
+
+        <referenceContainer name="amp.category.view.container">
+            <container name="banner.caption" htmlTag="div"  htmlClass="banner-caption" after="-" />
+        </referenceContainer> 
+        <!-- <move element="amp.category.description" destination="banner.caption" after="-"  /> -->
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="id" xsi:type="string">page-title-heading</argument>
+            </arguments>
+        </referenceBlock>
+        <!-- <move element="amp.page.main.title" destination="amp.category.description" before ="-"  /> -->
+        <referenceBlock name="category.description" remove="true"/>
+         <move element="amp.category.description" destination="banner.caption" after="-"  />
+        <move element="amp.page.main.title" destination="banner.caption" before ="-"  />
+    </body>
+</page>

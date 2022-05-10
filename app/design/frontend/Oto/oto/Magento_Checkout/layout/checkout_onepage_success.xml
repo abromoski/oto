@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+    <block class="Magento\Framework\View\Element\Template" name="checkout.success.conversion" before="-" template="Magento_Checkout::conversion.phtml" />
+</referenceBlock>
+
+        <referenceBlock name="head.additional">
+    <block class="Magento\Framework\View\Element\Template" name="checkout.success.tracking" before="-" template="Magento_Checkout::tracking.phtml" />
+</referenceBlock>
+
+<referenceContainer name="before.body.end">
+      <block class="Magento\Framework\View\Element\Template" name="checkout.success.ad" after="-" template="Magento_Checkout::beforeend.phtml" />
+</referenceContainer>
+<move element="head.additional" destination="head" before="-" />            
+  </body>
+</page>

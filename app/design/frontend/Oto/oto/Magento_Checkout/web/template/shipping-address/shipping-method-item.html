@@ -1,0 +1,45 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+
+<tr class="row" click="element.selectShippingMethod">
+    <td class="col col-method" style="flex-grow:0;padding:20px 20px">
+        <input type="radio" class="radio" ifnot="method.error_message" ko-checked="element.isSelected"
+            ko-value="method.carrier_code + '_' + method.method_code" attr="'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
+                  " checked />
+    </td>
+    <td style="flex-grow:1">
+        <table>
+            <tr>
+                <td class="col col-carrier"
+                    attr="'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code"
+                    text="method.carrier_title" style=" padding: 0 20px;font-size: 16px;font-weight: bold;" />
+            </tr>
+            <tr>
+                <td class="col col-method" attr="'id': 'label_method_' + method.method_code + '_' + method.carrier_code"
+                    text="method.method_title" style=" padding: 0 20px;" />
+            </tr>
+        </table>
+    </td>
+    <td class="col col-price" style="flex-grow: 0;padding: 20px 40px;">
+        <each args="element.getRegion('price')" render="" />
+    </td>
+
+
+
+</tr>
+<tr class="row row-error" if="method.error_message">
+    <td class="col col-error" colspan="4">
+        <div role="alert" class="message error">
+            <div text="method.error_message"></div>
+        </div>
+        <span class="no-display">
+            <input type="radio" attr="'value' : method.method_code, 'id': 's_method_' + method.method_code" />
+        </span>
+    </td>
+</tr>
+<!-- , 'checked': element.rates().length == 1 || element.isSelected-->

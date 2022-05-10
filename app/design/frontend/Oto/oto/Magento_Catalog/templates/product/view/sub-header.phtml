@@ -1,0 +1,7 @@
+<?php
+$_product = $block->getProduct(); // GET THE PRODUCT
+?>
+
+<h2 class="product-size"><?php echo $_product->getResource()->getAttribute('product_size_ml')->getFrontend()->getValue($_product);?> </h2> 
+
+<h2> <?php /* @escapeNotVerified */ echo $block->getProductPrice($_product) ?></h2>

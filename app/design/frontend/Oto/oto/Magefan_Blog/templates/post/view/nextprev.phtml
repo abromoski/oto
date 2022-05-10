@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post next and prev post links
+ *
+ * @var $block \Magefan\Blog\Block\Post\View\NextPrev
+ */
+?>
+
+<div class="col product-share">
+<p>Share this article:</p>
+
+
+<ul class="social-network social-circle">
+<!--li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>-->
+<li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"   class="icoFacebook" ><i class="fa fa-facebook"></i></a></li>
+
+<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;" class="icoLinkedin" ><i class="fa fa-linkedin"></i></a></li>
+<li><a title="Share on Twitter" class="icoTwitter"  onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;" >
+<i class="fa fa-twitter"></i></a></li>
+
+<li><a title="Share on Twitter" class="icoTwitter" href="mailto:?subject=&body=:%20" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;" >
+
+
+
+<i class="fa fa-envelope"></i></a></li>
+
+
+</ul>
+
+
+</div>
+
+<?php if ($block->displayLinks()) { ?>
+    <?php
+        $prevPost = $this->getPrevPost();
+        $nextPost = $this->getNextPost();
+    ?>
+    <?php if ($prevPost || $nextPost) { ?>
+        <div class="post-nextprev-hld clearfix">
+            <?php if ($prevPost) { ?>
+                <?php $title = $block->escapeHtml($prevPost->getTitle()) ?>
+                <a class="nextprev-link prev-link" href="<?php echo $prevPost->getPostUrl() ?>" title="<?php echo __('Read %1',$title) ?>">
+                    <?php echo __('&larr; Previous') ?>
+                </a>
+            <?php } ?>
+            <?php if ($nextPost) { ?>
+                <?php $title = $block->escapeHtml($nextPost->getTitle()) ?>
+                <a class="nextprev-link next-link" href="<?php echo $nextPost->getPostUrl() ?>" title="<?php echo __('Read %1',$title) ?>">
+                    <?php echo __('Next &rarr;') ?>
+                </a>
+            <?php } ?>
+        </div>
+    <?php } ?>
+<?php } ?>

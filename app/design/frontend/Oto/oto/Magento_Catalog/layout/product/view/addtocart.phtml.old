@@ -1,0 +1,61 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php $buttonTitle = __('Add to Cart'); ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="box-tocart">
+    <div class="fieldset">
+       
+        <div class="actions">
+            <div class="image-centred-button-product ">
+                
+                                
+                <img src="http://127.0.0.1:8888/magento/pub/media/focus-background.jpg" alt="focus button background" />
+                <div class="button-qty-holder">
+                                     <?php if ($block->shouldRenderQuantity()): ?>
+        <div class="field qty">
+            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
+            <div class="control">
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= /* @escapeNotVerified */ __('Qty') ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                       />
+                
+                
+            </div>
+      
+        <?php endif; ?>       
+                <button type="submit"
+                    title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
+                    class="action primary tocart button-white focus btn btn-default"
+                    id="product-addtocart-button">
+                
+               <span> <?php /* @escapeNotVerified */ echo $block->getProductPrice($_product) ?></span>
+            </button>
+            </div>
+            </div>
+              </div>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>

@@ -1,0 +1,20 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!--Bootstrap css-->
+        <css src="css/bootstrap.css" />
+           <css src="css/owl.theme.default.min.css" />
+        
+         <css src="css/owl.carousel.min.css" />
+        
+        
+       <css src="css/style5.css" media="all and (min-width: 1px)" /> 
+        <css src="css/video.css" />
+         <css src="css/aos.css" />
+      
+      
+            
+          <link src="https://fonts.googleapis.com/icon?family=Material+Icons" src_type="url"  rel="stylesheet"  type="text/css" media="all" />
+           <link src="https://use.fontawesome.com/releases/v5.5.0/css/all.css" src_type="url"  rel="stylesheet"  type="text/css" media="all" />
+         <link src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url"  rel="stylesheet"  type="text/css" media="all" />
+    </head>
+</page>

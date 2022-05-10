@@ -1,0 +1,179 @@
+<?php
+
+$product = $block->getProduct();
+$moment = $product->getAttributeText('moment_select');
+$sku = $product->getSku();
+?>
+
+<style>
+   .block.related {margin-top:8rem}
+  .block-actions{text-align:center;margin-top:4rem;margin-bottom:4rem}
+  .column.main .block.related .title strong {font-size:2rem}
+
+
+  #accordion h2{text-transform:uppercase;text-align:center;margin-top:4rem;margin-bottom:4rem}
+   #accordion h2.Balance,  .balance  .column.main .block.related .title strong, .balance .mobile-product-title h1{color: #330072;}
+   .product-segments{margin:bottom:8rem}
+  @media screen and (min-width:768px){
+  #accordion{margin-left: auto !important;margin-right: auto !important;max-width: 900px;padding-left:20px;padding:right:20px}
+  .block.related .product-items {margin-left:0}
+  
+}
+
+@media screen and (max-width:767px){
+  #accordion{padding-left:20px;padding:right:20px}
+  .product-add-form{padding-bottom:10px}
+}
+
+</style>
+
+
+<div id="accordion" >
+
+  <div class="product-segments">
+
+  <h2 class="<?php echo $moment; ?>" id="sdescription">What it is?</h2>
+
+    <div class="product-details-att">
+  
+
+      <p><?php echo $product->getData('description'); ?></p>
+ 
+    </div>
+    </div>
+
+
+
+<?php if (!empty($product->getData('product_PRESS'))): ?>
+  <div class="product-segments">
+  <h2 class="<?php echo $moment; ?>" id="sdescription">Press</h2>
+ 
+      <div class="product-press-content"><?php echo $product->getData('product_PRESS'); ?>
+      </div>
+  </div>
+  
+
+<?php endif ?>
+
+
+<?php if (!empty($product->getData('product_highlights_main'))): ?>
+  <div class="product-segments">
+  <h2 class="<?php echo $moment; ?>" id="sdescription">Why it's Special</h2>
+ 
+      <div class="product-press-content"><?php echo $product->getData('product_highlights_main'); ?>
+    </div>
+  </div>
+  
+
+<?php endif ?>
+
+
+  <div class="product-segments">
+  <h2 class="<?php echo $moment; ?>" id="sdescription">Ingredients</h2>
+ 
+      <div class="ingredients-content">
+      <?php if (!empty($product->getData('bundle_ingredients_title'))): ?>
+        <h3><?php echo $product->getData('bundle_ingredients_title'); ?></h3>
+        <?php endif ?> <h4 class="product-highlight-title"><?php echo $product->getData('attr_product_highlights_ingredient_'); ?></h4>
+          <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_cbd_descrip'); ?></p>
+      <h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_1'); ?></h4>
+          <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_1'); ?></p>
+          <h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_2'); ?></h4>
+          <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_2'); ?></p>
+          <h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_3'); ?></h4>
+          <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_3'); ?></p>
+         
+
+      </div>
+      <div class="ingredients-list">
+      <p><?php echo $product->getData('product_ingredients'); ?></p>
+      </div>
+    
+</div>
+  
+
+<?php if (!empty($product->getData('how_to_use'))): ?>
+  <div class="product-segments">
+  <h2 class="<?php echo $moment; ?>" id="sdescription">How To Use</h2>
+ 
+      <div class="product-how-to-use"><?php echo $product->getData('how_to_use'); ?>
+    </div>
+  </div>
+  
+
+<?php endif ?>
+
+
+  <div class="product-segments reviews">
+  <h2 class="<?php echo $moment; ?>" id="sdescription">Reviews</h2>
+ 
+    <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5763bccae0a06d08e809ecbb" data-businessunit-id="5d41beda58361a0001deda01" data-style-height="700px" data-style-width="100%" data-theme="light" data-sku="<?php echo $sku;?>" data-star-color="#00b67a" data-font-family="Montserrat" data-no-reviews="hide">
+    <a href="https://uk.trustpilot.com/review/otocbd.com" target="_blank" rel="noopener">Trustpilot</a>
+    </div>
+  </div>
+
+  <div class="product-segments delivery">
+  <h2 class="<?php echo $moment; ?>">Delivery and Returns</h2>
+  <div class="delivery-content">
+  <h3>Free Next day UK Delivery on orders over £50</h3>
+<p>If you order before 2pm, enjoy free next working day delivery.</p>
+
+<h3>No Hassle European Deliveries</h3>
+<p>We will sort out Customs and VAT our end, so you don't have to worry.</p>
+
+<h3>International Deliveries</h3>
+<p>We deliver worldwide. However, we cannot guarantee delivery date.</p>
+
+<p>For more delivery information click<a href="/delivery">here</a>.</p>
+<h3>Returns</h3>
+<p>You can get a refund if you return your goods unopened, within 30 days</p>
+<p>Click <a href="/returns">here</a> for further information on returns.</p>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+<?php if (!empty($product->getData('extra_content'))): ?>
+  <div class="extra-content">
+  
+ 
+    <?php echo $product->getData('extra_content'); ?>
+ 
+  </div>
+  
+
+<?php endif ?>
+
+
+<style>
+
+.block-actions, .thcfree {
+    text-align: center;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    list-style-position: outside;
+    font-size: 1.4rem;
+    padding-left: 20px;
+}
+.ingredients-content h3, .ingredients-list h3 {text-transform:uppercase;margin-bottom:2rem;text-decoration:underline;}
+.product-highlights h4, .ingredients-list h4{text-transform:uppercase;font-weight:700}
+#accordion{margin-bottom:4rem}
+
+</style>
+<style>
+
+.product-oto-day-and-night-drops .product-segments.reviews {display:none}
+.balance .fa {color:white}
+.focus .fa {color:white}
+.amplify .fa {color:white}
+</style>
+
+

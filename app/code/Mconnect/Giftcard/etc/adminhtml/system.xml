@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+		<tab id="mconnect" translate="label" sortOrder="200">
+            <label>M-Connect Media</label>
+        </tab>
+        <section id="giftcard" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Giftcard</label>
+            <tab>mconnect</tab>
+            <resource>Mconnect_Giftcard::config</resource>
+			<group id="active" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Licence Key Activation</label>
+				<field id="licence_key" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Licence Key</label>					
+				</field>
+				<field id="serial_key" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Serial Key</label>					
+				</field>
+			</group>
+			<group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="product_type" translate="label" type="multiselect" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Types</label>
+					<comment>Product Types, Which Can Be Bought With Gift Card</comment>
+					<!-- <source_model>Magento\Config\Model\Config\Source\Yesno</source_model> -->
+                    <source_model>Mconnect\Giftcard\Model\Config\Source\ProductTypes</source_model>
+                </field>
+            </group>
+			
+            <group id="options" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Gift Card Options</label>
+				<field id="lifetime" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Life Time </label>
+                    <comment>Set Life Time of Gift Promo Code. day(s)</comment>
+                </field>
+                <field id="allow_message" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow Message</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="use_for_self" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow customers to use gift cards they bought for themselves </label>                    
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="choose_delivery_date" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow customers to choose delivery date for certificates </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="notify_expiry" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Notify customers before certificate expires </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="days_before_expiry" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of Days before Expiry </label>                    
+                </field>
+				<!-- <field id="for_shipping_fee" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Gift Cards for shipping fee </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> -->
+				<field id="with_coupon_codes" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Gift Cards with coupon codes </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment>If Yes, customers can use Gift Card codes with system coupon codes to get discount.</comment>
+                </field>
+				
+            </group>
+			<group id="product" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>On Product Page</label>
+				<field id="change_image" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow customers to change the image inserted into template </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="max_img_size" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<validate>validate-number</validate>
+                    <label>Maximum size of image(s) uploaded by customers [KB] </label>					
+					<comment>Default is 500 KB.</comment>
+                </field>
+				<field id="msg_max_length" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">					
+					<validate>validate-digits-range digits-range-1-250</validate>
+                    <label>Message max length </label>
+					<comment>Message max length is 250 characters. (1-250)</comment>
+                </field>
+				<field id="preview_card" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow Preview of gift card </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+			</group>
+			<group id="cart" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>On Shopping Cart Page</label>
+				<!-- <field id="show_cardbox" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Gift Card box on shopping cart page </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> -->
+				<field id="display_info" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Information displayed on shopping cart page </label>
+                    <!-- <source_model>Magento\Config\Model\Config\Source\Yesno</source_model> -->
+					<source_model>Mconnect\Giftcard\Model\Config\Source\DisplayInfo</source_model>
+                </field>
+				<field id="card_as_pimage" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Gift Card image as product image in shopping cart </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+			</group>
+			<!-- <group id="checkout" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>On Checkout Page</label>
+				<field id="show_cardbox" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Gift Card box on Checkout Page </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+			</group> -->			
+			<group id="email" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Email Options</label>
+				<field id="email_sender" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Sender</label>
+					<source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <!-- <source_model>Mconnect\Giftcard\Model\Config\Source\EmailSender</source_model> -->
+                </field>
+				<field id="giftcard_template" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Template</label>					
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+				<field id="send_copy_to" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send copy to </label>                    
+					<comment>Separated by comma</comment>
+                </field>
+				<field id="expiry_template" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expiry Notification Email Template</label>
+                    <comment>Notice of the expiry of the Gift Card</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+				<field id="confirm_to_sender" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send confirmation to sender </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="sender_confirmation_template" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sender Confirmation Email Template</label>
+                    <comment>Notice of the expiry of the Gift Card</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+				<field id="notify_recipient_refunds" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send notification email to recipient when purchaser refunds Gift Card </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="notify_recipient_refunds_template" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send-to-recipient email template when Gift Card is refunded</label>
+                    <comment>Notice of the expiry of the Gift Card</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>				
+			</group>
+			<!-- <group id="print" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Gift Card Printout</label>
+				<field id="logo_pdf" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logo on PDF Printouts</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">Mconnect/Giftcard</upload_dir>
+                    <base_url type="media" scope_info="1">Mconnect/Giftcard</base_url>
+					<comment>Used in PDF and HTML documents. Recommended size: 171x63px. Supported format: jpeg, gif, png</comment>
+                </field>
+				<field id="show_barcode" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show barcode on Gift Card </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+			</group> -->
+        </section>
+    </system>
+</config>

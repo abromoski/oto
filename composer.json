@@ -1,0 +1,104 @@
+{
+    "name": "magento/project-community-edition",
+    "description": "eCommerce Platform for Growth (Community Edition)",
+    "type": "project",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require": {
+        "adfix/squarefeed": "2.0.8",
+        "adroll123123124/pixel": "1.0.13",
+        "awin/module-advertisertracking": "^1.0",
+        "brandbassador/plugin": "^3.0",
+        "brandcrock/module-giftpromotions": "1.0.2",
+        "checkoutcom/magento2": "2.3.1",
+        "ebizmarts/mailchimp-lib": "^3.0",
+        "magefan/module-blog": "^2.10.5",
+        "magefan/module-community": "^2.0.6",
+        "magefan/module-lazyload": "^2.0",
+        "magefan/module-rocketjavascript": "^2.1",
+        "magento/composer-root-update-plugin": "~1.0",
+        "magento/product-community-edition": "2.4.3-p1",
+        "mageplaza/magento-2-blog-extension": "^3.0",
+        "mageplaza/magento-2-spanish-language-pack": "dev-master",
+        "mageplaza/module-ajax-layered-navigation": "^1.0",
+        "mageplaza/module-better-popup": "^1.1",
+        "mageplaza/module-core": "^1.4",
+        "mageplaza/module-smtp": "^1.2",
+        "mailchimp/mc-magento2": "^102.3",
+        "mediarox/module-payment-restrictions": "2.4.3",
+        "ometria/magento2": "^2.0",
+        "taxjar/module-taxjar": "1.8.0",
+        "trustpilot/module-reviews": "2.6.564"
+    },
+    "require-dev": {
+        "allure-framework/allure-phpunit": "~1.2.0",
+        "friendsofphp/php-cs-fixer": "~2.14.0",
+        "lusitanian/oauth": "~0.8.10",
+        "magento/magento-coding-standard": "~3.0.0",
+        "pdepend/pdepend": "2.5.2",
+        "phpmd/phpmd": "@stable",
+        "phpunit/phpunit": "~6.5.0",
+        "sebastian/phpcpd": "~3.0.0",
+        "squizlabs/php_codesniffer": "~3.4.0"
+    },
+    "conflict": {
+        "gene/bluefoot": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
+            "Magento\\Setup\\": "setup/src/Magento/Setup/",
+            "Magento\\": "app/code/Magento/",
+            "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
+        },
+        "psr-0": {
+            "": [
+                "app/code/",
+                "generated/code/"
+            ]
+        },
+        "files": [
+            "app/etc/NonComposerComponentRegistration.php"
+        ],
+        "exclude-from-classmap": [
+            "**/dev/**",
+            "**/update/**",
+            "**/Test/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
+            "Magento\\Tools\\": "dev/tools/Magento/Tools/",
+            "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/",
+            "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
+            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
+        }
+    },
+    "version": "2.3.2",
+    "minimum-stability": "stable",
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://repo.magento.com/",
+            "canonical": false
+        },
+        "ometria": {
+            "type": "vcs",
+            "url": "https://github.com/Ometria/magento2-extension"
+        },
+        "brandbassador_plugin": {
+            "type": "path",
+            "url": "private/repo/Brandbassador/Plugin"
+        }
+    },
+    "extra": {
+        "magento-force": "override"
+    }
+}

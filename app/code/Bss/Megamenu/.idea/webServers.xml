@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7611b8c2-6fa9-4a6b-8d05-1569ac9179ff" name="BC" url="http://dev.pixeprint.com/">
+        <fileTransfer host="109.199.118.133" port="18765" privateKey="C:\Users\BSS074\Desktop\private_key(4).ppk" rootFolder="/home/pixeprin/dev/" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="18765" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="2770c2e1-496d-4b4a-84b3-f3ee5645cf08" name="BC-417" url="http://kuat.work/">
+        <fileTransfer host="1b1ffdf37c.nxcli.net" port="22" rootFolder="/chroot/home/ace052bb/kuat.work/html//" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

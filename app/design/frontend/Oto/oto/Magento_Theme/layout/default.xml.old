@@ -1,0 +1,86 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   
+    
+    
+    <body>
+
+    <referenceBlock name="head.additional">
+    <block class="Magento\Framework\View\Element\Template" name="gtm.head" before="-" template="Magento_Theme::html/gtm_head.phtml" />
+</referenceBlock>
+
+<referenceContainer name="after.body.start">
+    <block class="Magento\Framework\View\Element\Template" name="gtm.body" before="-" template="Magento_Theme::html/gtm_body.phtml" />
+</referenceContainer>
+
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">200</argument>
+                <argument name="logo_img_height" xsi:type="number">60</argument>
+                
+            </arguments>
+        </referenceBlock>
+        
+        
+
+        
+        
+         <referenceContainer name="before.body.end">
+        <block class="Magento\Framework\View\Element\Template" name="scripts.footer" template="Magento_Theme::html/js.phtml"/>
+</referenceContainer>
+        <referenceBlock name="footer_links" remove="true"/>
+<referenceContainer name="footer">
+    <block class="Magento\Cms\Block\Block" name="footer_block">
+        <arguments>
+            <argument name="block_id" xsi:type="string">footer_block</argument>
+        </arguments>
+    </block>
+</referenceContainer>
+        
+          <referenceBlock name="top.links">
+      <!--  <referenceBlock name="register-link" remove="true" />     -->      <!--for Create Account Link-->
+      <!--  <referenceBlock name="authorization-link" remove="true" /> -->     <!--for Sign In Link  -->
+     <!--   <referenceBlock name="wish-list-link" remove="true" />    -->      <!--for WishList Link-->
+              <!--for My Account Link-->
+
+    </referenceBlock>
+           <referenceBlock name="my-account-link">
+  <arguments>
+   <argument name="label" xsi:type="string" translate="true"></argument>
+   <argument name="class" xsi:type="string" translate="true">account-link</argument>
+  </arguments>
+</referenceBlock>
+        
+        
+        <referenceContainer name="header-wrapper" label="navbar" htmlTag="div" htmlClass="header content" htmlId="hello" />
+    
+        
+        <referenceBlock name="form.subscribe" remove="true"/>
+      
+  <!--       <move element="header.panel" destination="header.panel.wrapper"/>
+<move element="logo" destination="header.panel" before="catalog.topnav"/>
+<move element="catalog.topnav" destination="header.panel" after="logo"/>
+<move element="top.search" destination="header.panel" after="catalog.topnav"/>
+<move element="top.links" destination="header.panel" before="minicart"/>-->
+
+         <referenceBlock name="top.search" remove="true" />
+         <referenceBlock name="report.bugs" remove="true" />
+         
+        
+
+
+    
+      
+        
+          <move element="navigation.sections" destination="header.nav.container" before="-" />
+         <move element="minicart" destination="header.nav.container"  after="navigation.sections" />
+          <move element="top.links" destination="header.nav.container"  after="-" />
+        
+        <referenceContainer name="content">
+            <container name="header.nav.container" htmlTag="div" htmlClass="header-right row" before="-"/>            
+        </referenceContainer>
+         <move element="header.nav.container" destination="header-wrapper" after="logo" />
+   
+    </body>
+</page>

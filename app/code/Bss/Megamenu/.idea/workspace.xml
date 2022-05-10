@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c7c8589-f342-45ad-a897-01e0bcca5569" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1172180312">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="js" value="9" />
+          <entry key="less" value="1" />
+          <entry key="php" value="23" />
+          <entry key="phtml" value="4" />
+          <entry key="txt" value="1" />
+          <entry key="xml" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="JavaScript" value="9" />
+          <entry key="Less" value="1" />
+          <entry key="PHP" value="27" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="196" />
+          <entry key="less" value="4" />
+          <entry key="php" value="1787" />
+          <entry key="phtml" value="307" />
+          <entry key="xml" value="51" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="196" />
+          <entry key="Less" value="4" />
+          <entry key="PHP" value="2094" />
+          <entry key="XML" value="51" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1651479209">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="4" />
+          <entry key="xml" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="4" />
+          <entry key="XML" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/module.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/di.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Helper/Data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#6#12#0" expanded="true" />
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#6#12#0" expanded="true" />
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#6#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Config.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/adminhtml/system.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="27" column="62" lean-forward="true" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/adminhtml/menu.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/adminhtml/routes.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etc/config.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Setup/UpgradeSchema.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1626" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Setup/InstallSchema.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1920" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Bss</find>
+      <find>ama</find>
+      <find>_orderRepository</find>
+      <find>bss</find>
+      <find>_UpdateDetailStock</find>
+      <find>_OnClick</find>
+      <find>_OnChange</find>
+      <find>if (!$('body').hasClass('catalog-category-view')) {</find>
+      <find>SwatchRendererTooltip</find>
+      <find>StockItemRepository</find>
+      <find>getQtyProduct</find>
+      <find>row</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Helper/Data.php" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/registration.php" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/etc/module.xml" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/Setup/InstallSchema.php" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/etc/di.xml" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/etc/config.php" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/Ui/Component/Listing/Column/PurchasedPrice.php" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/Model/ResourceModel/Order/Grid/Collection.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 2.js" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/view/adminhtml/ui_component/sales_order_grid.xml" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Configurable.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 6.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 4.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 3.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Stock.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/list_item.phtml" />
+        <option value="&lt;2770c2e1-496d-4b4a-84b3-f3ee5645cf08&gt;/app/design/frontend/Mgs/ninth/MGS_Mpanel/templates/products/list_item/list_item.phtml" />
+        <option value="&lt;2770c2e1-496d-4b4a-84b3-f3ee5645cf08&gt;/app/code/Bss/ConfigurableItemsSales/Helper/Stock.php" />
+        <option value="&lt;7611b8c2-6fa9-4a6b-8d05-1569ac9179ff&gt;/app/code/Bss/OrderListCustomize/Setup/InstallData.php" />
+        <option value="$PROJECT_DIR$/Block/Html/Menu.php" />
+        <option value="$PROJECT_DIR$/view/frontend/web/css/source/module/_layout.css" />
+        <option value="$PROJECT_DIR$/view/frontend/web/css/source/_module.less" />
+        <option value="$PROJECT_DIR$/etc/module.xml" />
+        <option value="$PROJECT_DIR$/etc/adminhtml/system.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+              <item name="adminhtml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="Helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="ResourceModel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="Setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bss_Megamenu_M2_v1.0.6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bss_Megamenu_M2_v1.0.6" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c7c8589-f342-45ad-a897-01e0bcca5569" name="Default Changelist" comment="" />
+      <created>1548315863159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548315863159</updated>
+      <workItem from="1548315864430" duration="360000" />
+      <workItem from="1548382468159" duration="34402000" />
+      <workItem from="1548727001346" duration="29261000" />
+      <workItem from="1550628422413" duration="1333000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="65443000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.1626898" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" order="12" visible="true" weight="0.13991323" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="13" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Remote Host" order="4" visible="true" weight="0.17750533" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/layout/megamenu_category_index.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frontend/templates/html/topmenu_default.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frontend/templates/html/topmenu.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/web/template/content.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/ui_component/bss_megamenu_category_store.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/templates/category/tree.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/templates/category/top.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/templates/category/content.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/adminhtml/layout/megamenu_category_new.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 2.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/catalog_product_view.xml" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/catalog_category_view.xml" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/deployed_version.txt" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/requirejs-config 2.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/di.xml" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/di 2.xml" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 6.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Configurable.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/requirejs-config.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 5.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 4.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/swatch-renderer 3.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/list_item.phtml" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Stock.php" />
+    <entry file="file://$PROJECT_DIR$/Block/Html/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9340">
+          <caret line="482" selection-start-line="482" selection-end-line="482" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frontend/web/css/source/module/_layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/frontend/web/css/source/_module.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/di.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Helper/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#6#12#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#6#12#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#6#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/adminhtml/system.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="62" lean-forward="true" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/adminhtml/menu.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/adminhtml/routes.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Setup/UpgradeSchema.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1626" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Setup/InstallSchema.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1920" />
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,22 @@
+<?php
+$_product = $block->getProduct(); // GET THE PRODUCT
+?>
+
+        
+       <div class="container-fluid">
+                        <div   class="row" >
+
+                                <div id="ingredients-box" class="col-lg-6 title-image-description text-centred-box  ingredients row-eq-height">
+                                       
+                                      <?php echo $_product->getResource()->getAttribute('ingredients')->getFrontend()->getValue($_product);?>
+                                       
+                                        </div>
+                                   
+                            <div class="col-lg-6 img-centred-box ">
+                              
+                                   <?php echo $_product->getResource()->getAttribute('ingredients_image')->getFrontend()->getValue($_product);?>
+                                </div>
+
+                        </div>
+					
+						</div>

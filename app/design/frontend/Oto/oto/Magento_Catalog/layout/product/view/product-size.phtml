@@ -1,0 +1,7 @@
+<?php
+$_product = $block->getProduct(); // GET THE PRODUCT
+?>
+<div class="product-size">
+<p class="product-size"><?php echo $_product->getResource()->getAttribute('product_size_ml')->getFrontend()->getValue($_product);?>ml <a href="#sdescription">Read more <i class="fa fa-angle-double-right"></i> </a></p> 
+</div>
+

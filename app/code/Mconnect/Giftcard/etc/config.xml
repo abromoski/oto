@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <giftcard>
+            <general>
+                <product_type>simple,configurable,grouped,virtual,bundle,downloadable</product_type>
+            </general>
+			<options>
+				<lifetime>0</lifetime>
+				<allow_message>1</allow_message>
+				<use_for_self>0</use_for_self>
+				<choose_delivery_date>1</choose_delivery_date>
+				<notify_expiry>1</notify_expiry>
+				<days_before_expiry>0</days_before_expiry>
+				<for_shipping_fee>0</for_shipping_fee>
+				<with_coupon_codes>1</with_coupon_codes>
+			</options>
+			<product>
+				<change_image>1</change_image>
+				<max_img_size>500</max_img_size>
+				<msg_max_length>250</msg_max_length>
+				<preview_card>1</preview_card>
+			</product>
+			<cart>
+				<show_cardbox>1</show_cardbox>
+				<display_info>amount,giftcard_template_id,customer_name,recipient_name,recipient_email,recipient_address,day_to_send,timezone_to_send</display_info>
+				<card_as_pimage>1</card_as_pimage>
+			</cart>
+			<checkout>
+				<show_cardbox>0</show_cardbox>
+			</checkout>
+			<email>
+				<email_sender>general</email_sender>
+				<confirm_to_sender>1</confirm_to_sender>
+				<notify_recipient_refunds>0</notify_recipient_refunds>
+			</email>
+			<print>
+				<show_barcode>1</show_barcode>
+			</print>
+            
+        </giftcard>        
+    </default>
+</config>

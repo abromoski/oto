@@ -1,0 +1,68 @@
+<?php
+// @codingStandardsIgnoreFile
+?>
+<?php $_giftcodes = $block->getGiftcodes(); ?>
+<?php if ($_giftcodes && count($_giftcodes)) : ?>
+    <div class="table-wrapper orders-history">
+        <table class="data table table-order-items history" id="my-orders-table">
+            <caption class="table-caption"><?php /* @noEscape */ echo __('Gift Codes') ?></caption>
+            <thead>
+                <tr>
+                    <th scope="col" class="col id"><?php /* @noEscape */ echo __('Gift Code') ?></th>
+                    <th scope="col" class="col date"><?php /* @noEscape */ echo __('Sender') ?></th>
+                    <th scope="col" class="col shipping"><?php /* @noEscape */ echo __('Initial Balance') ?></th>
+                    <th scope="col" class="col total"><?php /* @noEscape */ echo __('Current Balance') ?></th>
+                    <th scope="col" class="col total"><?php /* @noEscape */ echo __('Added Date') ?></th>
+                    <th scope="col" class="col total"><?php /* @noEscape */ echo __('Expired Date') ?></th>
+                    <th scope="col" class="col status"><?php /* @noEscape */ echo __('Status') ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($_giftcodes as $_giftcode) : ?>
+                    <tr>
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Gift Code')) ?>"
+                            class="col id">
+                            <?php  /* @noEscape */ echo $_giftcode->getGiftcode() ?>
+                        </td>
+                        
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Sender')) ?>"
+                            class="col sender">
+                            <?php  /* @noEscape */ echo $_giftcode->getSenderName() ?>
+                        </td>
+                        
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Initial Balance')) ?>"
+                        class="col total">
+                            <?php /* @noEscape */ echo $block->formatCurrency($_giftcode->getInitialValue()); ?>
+                        </td>
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Current Balance')) ?>"
+                            class="col total">
+                            <?php  /* @noEscape */ echo $block->formatCurrency($_giftcode->getCurrentBalance()) ?>
+                        </td>
+                        
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Added Date')) ?>"
+                            class="col date">
+                            <?php  /* @noEscape */ echo $block->formatDate($_giftcode->getCreatedAt()) ?>
+                        </td>
+                        
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Expired Date')) ?>"
+                            class="col date">
+                            <?php  /* @noEscape */ echo $block->formatDate($_giftcode->getExpiryDate()) ?>
+                        </td>
+                        
+                        <td data-th="<?php /* @noEscape */ echo $block->escapeHtml(__('Status')) ?>" class="col status">
+                            <?php
+                                $statuses = $_giftcode->getAvailableStatuses();
+                                /* @noEscape */ echo $statuses[$_giftcode->getStatus()]; ?>
+                        </td>
+                        
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php if ($block->getPagerHtml()) : ?>
+        <div class="order-products-toolbar toolbar bottom"><?php /* @noEscape */ echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+<?php else : ?>
+    <div class="message info empty"><span><?php  /* @noEscape */ echo __('You have no gift code.'); ?></span></div>
+<?php endif ?>

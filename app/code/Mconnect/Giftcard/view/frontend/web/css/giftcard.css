@@ -1,0 +1,278 @@
+/* Gift Card Product form options */
+.gc-product-add-form {
+    clear: both !important;
+    margin-top: 20px;
+    padding-top: 0 !important;
+}
+.gc-product-form-options {
+    margin-bottom: 40px;
+}
+.gc-product-form-options .fieldset .legend {
+    margin-left: 0;
+}
+.gc-product-form-options__field-full-width {
+    display: block !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+}
+
+@media (min-width: 768px), print{
+    .page-product-giftcard .product-add-form .field:not(.text):nth-child(odd) {
+        padding-right: 25px;
+    }
+
+    .page-product-giftcard .product-add-form .field:not(.text) {
+        margin: 0 0 20px;
+        padding: 0 12px 0 0;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+    }
+}
+
+.gc-product-form-options__step-number {
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+    border-radius: 11px;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.gc-product-form-options__amount-control {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 0 !important;
+    width: 50%;
+    vertical-align: top;
+}
+.gc-product-form-options__amount-control:last-child {
+    padding-left: 25px;
+}
+.gc-product-form-options__template-options {
+    overflow: hidden;
+}
+.gc-product-form-options__template-options.mage-error {
+    border: 1px solid #ed8380;
+}
+.gc-product-form-options__template-option {
+    float: left;
+    margin: 2px;
+    width: 150px;
+    height: 112px;
+    border: 3px solid transparent;
+    text-align: center;
+    overflow: hidden;
+}
+.gc-product-form-options__template-option.selected,
+.gc-product-form-options__template-option:hover {
+    border-color: #62bcf7;
+    text-decoration: none;
+}
+.gc-product-form-options__template-image {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.gc-product-form-options__template-name {
+    display: block;
+    line-height: 112px;
+    background: #f0f0f0;
+}
+.gc-product-form-options__template-name,
+.gc-product-form-options__template-name:hover {
+    color: #8f8f8f;
+}
+.gc-product-form-options__email {
+    margin-top: 15px;
+}
+.gc-product-form-options__fromto {
+    margin-bottom: 20px !important;
+}
+.gc-product-form-options__email-content + .gc-product-form-options__preview {
+    margin-top: 20px;
+}
+.gc-product-form-options__email-content textarea {
+    vertical-align: top;
+}
+.gc-product-form-options .mage-error[generated] {
+    display: block;
+    color: #e02b27;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+.page-product-giftcardproduct .gc_design_template {
+    opacity: 0;
+    position: absolute;
+}
+.page-product-giftcardproduct input[type="radio"]:checked + label {
+    border-color: #62bcf7;
+}
+.gc-product-form .gc_image_uploader #fileupload {
+    border: 2px dotted #999999;
+    height: 40px;
+    padding: 10px;
+    position: relative;
+    z-index: 100;
+}
+.gc_image_uploader input#fileupload {
+    color: transparent;
+}
+.gc-product-form .gc_image_uploader .form-buttons.button {
+    position: relative;
+}
+.gc-product-form .gc_image_uploader .drag-drop {
+    color: #666666;
+    font-size: 15px;
+    left: 100px;
+    position: absolute;
+    top: 18px;
+    width: 100% !important;
+    z-index: 98;
+}
+.gc-product-form .gc_image_uploader #fileupload:focus {
+    box-shadow: none !important;
+    border-color: #666;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .gc-product-form .gc_image_uploader #fileupload {
+        line-height: 38px !important;
+    }
+    .gc-product-form .gc_image_uploader .drag-drop {
+        left: 108px;
+    }
+}
+.gc-product-form .image-placeholder {
+    background: #ffffff none repeat scroll 0 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 1.2rem;
+    position: relative;
+    vertical-align: top;
+    width: 150px;
+}
+.gc-product-form .giftcard-image-wrapper {
+    border: 1px solid #cccccc;
+    height: 150px;
+    width: 150px;
+}
+.gc-product-form .giftcard-image-wrapper img.product-image {
+    bottom: 0;
+    left: 1;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.gc-product-form .giftcard-image-wrapper .actions .action-remove {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    bottom: 0;
+    box-shadow: none;
+    color: #514943;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    z-index: 3;
+}
+.gc-product-form .giftcard-image-wrapper .actions .action-remove:before {
+    background: rgba(0, 0, 0, 0) url("../images/d-icon.png") no-repeat scroll 1px center;
+    color: #9e9e9e;
+    content: "";
+    display: inline-block;
+    font-family: "Admin Icons";
+    font-size: 2rem;
+    font-weight: normal;
+    height: 20px;
+    line-height: inherit;
+    overflow: hidden;
+    text-align: center;
+    width: 16px;
+}
+.action-remove:hover:before {
+    background: rgba(0, 0, 0, 0) url("../images/d-icon.png") no-repeat scroll -22px center !important;
+}
+.gc-product-form .giftcard-image-wrapper .actions .action-remove span {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    color: #000;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .gc-product-form .gc_image_uploader .drag-drop {
+        left: 110px;
+    }
+    .gc-product-form .gc_image_uploader #fileupload {
+        width: 80px !important;
+        padding-right: 200px !important;
+    }
+    
+}
+.checkout-cart-index #block-discount {
+    clear: left;
+}
+.checkout-cart-index #block-discount #giftcode {
+    max-width: 250px;
+}
+#block-discount .fieldset.coupon {
+    display: table;
+}
+#block-discount .field {
+    display: table-cell;
+}
+#block-discount .actions-toolbar {
+    display: table-cell;
+}
+
+/**/
+#block-discount .fieldset.coupon input{
+        background: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 32px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 294px !important;
+    max-width: 294px !important;
+    box-sizing: border-box;
+}
+#block-discount.giftcard-discount #block-discount-heading{
+    color: #1979c3;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+#block-discount.giftcard-discount #block-discount-heading::after{
+    content: '\e622';
+    font-family: 'luma-icons';
+    display: inline;
+    margin-left: 10px;
+    position: static;
+    color: #858585;
+    font-size: 12px;
+}
+
+#block-discount .fieldset.coupon .actions-toolbar .action.apply_giftcode.primary,
+#block-discount .fieldset.coupon .actions-toolbar .action.cancel_giftcode.primary{
+    background: #eee;
+    border: 1px solid #cccccc;
+    color: #333333;
+    margin-top: 13px;
+    border-left: 0;
+    margin-left: -3px;
+}

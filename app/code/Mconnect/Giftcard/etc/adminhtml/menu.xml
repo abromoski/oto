@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mconnect_Giftcard::giftcard" title="Gift Card" module="Mconnect_Giftcard" sortOrder="30" parent="Mconnect_General::general" resource="Mconnect_Giftcard::giftcard"/>
+		
+		<add id="Mconnect_Giftcard::giftcard_product" title="Gift Card Products" module="Mconnect_Giftcard" sortOrder="10" parent="Mconnect_Giftcard::giftcard" action="giftcard/product/" resource="Mconnect_Giftcard::products"/>
+		
+		<add id="Mconnect_Giftcard::giftcard_giftcode" title="Gift Codes" module="Mconnect_Giftcard" sortOrder="10" parent="Mconnect_Giftcard::giftcard" action="giftcard/giftcode/" resource="Mconnect_Giftcard::giftcode"/>
+		
+		<add id="Mconnect_Giftcard::guide" title="Guide" module="Mconnect_Giftcard" sortOrder="10" parent="Mconnect_Giftcard::giftcard" action="giftcard/guide/" resource="Mconnect_Giftcard::guide"/>
+		
+		<add id="Mconnect_Giftcard::giftcard_Setting" title="Configuration" module="Mconnect_Giftcard" sortOrder="10" parent="Mconnect_Giftcard::giftcard" action="adminhtml/system_config/edit/section/giftcard/" resource="Mconnect_Giftcard::config"/>
+    </menu>
+</config>

@@ -1,0 +1,80 @@
+<?php
+
+$product = $block->getProduct();
+$firstPriceAmt = $product->getPriceInfo()->getPrice('regular_price')->getValue();
+
+$finalPriceAmt = $product->getPriceInfo()->getPrice('final_price')->getValue();
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+
+// Instance of Pricing Helper
+
+$priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data'); 
+
+$firstPriceAmt= $priceHelper->currency($product->getPrice(), true, false); 
+$finalPriceAmt= $priceHelper->currency($product->getFinalPrice(), true, false); 
+
+$moment = $product->getAttributeText('moment_select');
+$momentcurve ="";
+if ($moment == "Focus"){
+    $momentcurve = $this->getViewFileUrl("images/product-bell-curve-focus.png");
+}
+if ($moment == "Balance"){
+    $momentcurve = $this->getViewFileUrl("images/product-bell-curve-balance.png");
+}
+if ($moment == "Amplify"){
+    $momentcurve = $this->getViewFileUrl("images/product-bell-curve-amplify.png");
+}
+if ($moment == "All Day"){
+    $momentcurve = $this->getViewFileUrl("images/bell-curve-all.jpg");
+}
+
+if ($moment == "Christmas"){
+    $momentcurve = $this->getViewFileUrl("images/bell-curve-all.jpg");
+}
+?>
+
+<div class="klarna-product">
+<!-- Placement v2 -->
+<!-- Placement v2 -->
+<klarna-placement
+  data-key="credit-promotion-auto-size"
+  data-locale="en-GB"
+  data-purchase-amount=""
+></klarna-placement>
+<!-- end Placement -->
+<!-- end Placement -->
+</div>
+
+<div class ="row price-mg-moment">
+ <div class="col-4">
+
+ <?php if ($firstPriceAmt == $finalPriceAmt): ?>
+
+    <p class="pricemoment "><?php echo $firstPriceAmt ?> </p>
+
+    <?php else :?>
+
+        <p class="pricemoment small"><span class="was">Usually</span><br /><?php echo $firstPriceAmt ?> </p>
+        <p class="pricemoment large"><span class="now">Now</span><br /><?php echo $finalPriceAmt ?> </p>
+       
+        <?php endif; ?>
+
+     
+
+
+
+</div>
+        <div class="col-4 cbdquantity">
+            <p class="pricemoment"><?php echo $product->getData('cbd_quantity_mg');?><span class="sizeml">mg CBD</span><span class="sizeml-alt">OTO</span></p>
+    </div>
+    <div class="col-4 curve">
+        <div class="row curveposition">
+            
+            <p ><?php echo $moment;?></p>
+           
+           
+        
+        </div>      
+    </div>
+</div>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    
+
+    
+    <body>
+
+<block class="Magento\Catalog\Block\Product\View" name="product.info.mobiletitle" template="product/view/mobiletitle.phtml"/>
+<block class="Magento\Catalog\Block\Product\View" name="product.info.socialshare" template="product/view/socialshare.phtml"/>
+<block class="Magento\Catalog\Block\Product\View" name="product.info.productaccordian" template="product/view/productaccordian.phtml"/>
+<block class="Magento\Catalog\Block\Product\View" name="product.info.producticons" template="product/view/producticons.phtml"/>
+<block class="Magento\Catalog\Block\Product\View" name="product.info.prooduct" template="product/view/productaccordian.phtml"/>
+<!--<block class="Magento\Catalog\Block\Product\View" name="product.info.size" template="product/view/product-size.phtml"/>-->
+<block class="Magento\Catalog\Block\Product\View" name="product.info.pricemoment" template="product/view/pricemoment.phtml"/>
+<block class="Magento\Catalog\Block\Product\View" name="product.info.moment" template="product/view/moment.phtml"/>
+   <referenceBlock name="product.info.addtocart">
+        <block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto" template="Magento_Catalog::product/view/addto.phtml"/>
+   </referenceBlock>
+        <!--<block class="Magento\Catalog\Block\Product\View" name="product.info.ingredients" template="product/view/ingredients.phtml"/>-->
+
+<!--<move element="reviewsalone" destination="main" after="product.info.tabs"  />
+<move element="poo" destination="main" before ="product.info.tabs"  />
+<move element="product.info.review" destination="product.info.type" before="-"/>
+<move element="free_shipping" destination="product.info.main" before="-" /> -->    
+<move element="product.info.overview" destination="product.info.main" after="page.main.title"/>
+<!--<move element="product.info.sku" destination="product.info.main" after="product.info.social"/>
+<move element="product.facebook.like" destination="product.info.social" after="-"/>
+<move element="form.subscribe" destination="before-footer-container" after="-"  />
+
+    
+
+--> 
+ <referenceBlock name="product.info.media">
+        <block class="Magento\Catalog\Block\Product\View" name="product.media.stregnth" as="addto" template="Magento_Catalog::product/view/otostrengthimage.phtml"/>
+   </referenceBlock>
+        
+        
+        <referenceContainer name="content">
+            <container name="product.info.container" htmlTag="div" htmlClass="product-info-container row" before="-"/>    
+                
+        </referenceContainer>
+        
+         <move element="product.info.main" destination="product.info.container"/>
+         <move element="product.info.media" destination="product.info.container"  before="product.info.main" />
+      <move element="product.info.mobiletitle" destination="product.info.container"  before="product.info.media" />
+  
+      <!-- <referenceBlock name="breadcrumbs" remove="true" />
+        <move element="product.info.socialshare" destination="product.info.main" after="product.info.overview" /> -->
+       <referenceBlock name="product.info.price" remove="true" />
+       <referenceBlock name="view.addto.compare" remove="true" /> 
+  <!-- <referenceBlock name="reviews.tab" remove="true" />-->
+      <referenceBlock name="product.review.form" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+
+      <move element="page.main.title" destination="product.info.main" before="-"/>
+       
+        
+          <referenceBlock name="product.info.sku" remove="true" />
+        
+<referenceContainer name="product.attributes" remove="true" />
+<!--<referenceContainer name="product.info.socialshare" remove="true" />-->
+<referenceContainer name="product.info.details" remove="true" />
+
+<!-- <move element="product.info.size" destination="product.info.main" after="product.info.overview"/>-->
+<!-- <move element="product.info.pricemoment" destination="product.info.main" after="product.info.overview" />-->
+
+<move element="product.info.productaccordian" destination="content" after="-"/>
+<move element="product.info.producticons" destination="product.info.main" before="product.info.addtocart"/>
+<move element="product.info.addto" destination="product.info.addtocart" after="-"/>
+
+<referenceBlock name="catalog.compare.link" remove="true" /> 
+<referenceBlock name="product.info.social" remove="true" /> 
+
+
+ <referenceBlock name="wish-list-link" remove="true" /> <!--for My
+
+
+Wishlist Link-->
+
+
+       
+
+              
+       
+
+
+
+
+
+              
+
+</body>
+</page>

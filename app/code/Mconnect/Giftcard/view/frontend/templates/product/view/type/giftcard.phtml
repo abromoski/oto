@@ -1,0 +1,352 @@
+<?php
+
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php
+
+$amounts = $block->getAmounts();
+$designs = $block->getDesigns();
+
+$min_amount     = $_product->getGcOpenAmountMin();
+$max_amount     = $_product->getGcOpenAmountMax();
+$allow_message  = $_product->getGcAllowMessage();
+$card_type      = $_product->getGcCardType();
+
+$_helper = $this->helper('Mconnect\Giftcard\Helper\Data');
+$max_msg_length = $_helper->getMsgMaxLength();
+
+if ($allow_message == 2) {
+    $allow_message = $_helper->getAllowMessage();
+}
+$step = 0;
+?>
+<div class="gc-product-form">
+<?php if (count($amounts)>0) { ?>
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span class="gc-product-form-options__step-number"><?php /* @noEscape */ echo ++$step;?></span>
+            <span><?php /* @noEscape */ echo __('Choose an amount'); ?></span>
+        </legend>
+        <div class="field required gc-product-form-options__field-full-width">
+            <label class="label" for="gc_amount">
+                <span><?php /* @noEscape */ echo __('Card value ($)') ?></span>
+            </label>
+
+            <div class="fieldset">
+                <?php if (( count($amounts)>0 && !isset($amounts['custom']) ) || ( count($amounts)>1 && isset($amounts['custom']) )) { ?>
+                    <div class="field gc-product-form-options__amount-control" style="">
+                        <div class="control amount-options" >
+                            <select id="product_gc_amount" name="gc_amount"
+                            class="required-entry gc-amount-entry" aria-required="true">
+                                <option value=""><?php /* @noEscape */ echo __('Choose an Amount...'); ?></option>
+                                <?php foreach ($amounts as $key => $amount) { ?>
+                                    <?php if ($key != 'custom') { ?>
+                                        <option value="<?php /* @noEscape */ echo number_format($amount, 2); ?>">
+                                        <?php /* @noEscape */ echo $this->helper('Magento\Framework\Pricing\Helper\Data')
+                                            ->currency(number_format($amount, 2), true, false); ?>
+                                        </option>
+                                    <?php } ?>
+                                <?php } ?>
+                                
+                                <?php if (isset($amounts['custom'])) { ?>
+                                    <option value="custom"><?php /* @noEscape */ echo __('Other Amount...') ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="control amount-options" style="display: none;"></div>
+                    </div>
+                <?php } ?>
+                
+                <?php
+                if (isset($amounts['custom'])) {
+                    $custom_display = 'style="display: none;"';
+                    if (count($amounts) == 1 && isset($amounts['custom'])) {
+                        $custom_display = 'style="display: block;"';
+                    }
+                    ?>
+                    <div class="field gc-product-form-options__amount-control">
+                    <div id="product_gc_custom_amount" class="control amount-custom"
+                        <?php /* @noEscape */ echo $custom_display; ?> >
+                    <input name="gc_custom_amount" value=""
+                        class="validate-number required-entry input-text validate-digits-range <?php /* @noEscape */
+                        echo "digits-range-".intval($min_amount)."-".intval($max_amount); ?>"
+                        aria-required="true" placeholder="<?php /* @noEscape */
+                        echo number_format($min_amount).'&ndash;'.number_format($max_amount); ?>" type="text">
+                    </div>
+                    </div>
+                <?php
+                } ?>
+            </div>
+        </div>
+    </fieldset>
+<?php } ?>
+    
+<?php if (count($designs) > 0 && $card_type != \Mconnect\Giftcard\Model\Product\Attribute\Source\CardType::PHYSICAL) { ?>
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span class="gc-product-form-options__step-number"><?php /* @noEscape */ echo ++$step;?></span>
+            <span><?php /* @noEscape */ echo __('Select a design') ?></span>
+        </legend>
+
+        <div class="fields required gc-product-form-options__field-full-width">
+            <div class="control gc-product-form-options__template-options" data-highlight="gc_template">
+                <?php
+                $e=0;
+                foreach ($designs as $design) {
+                    $e++;
+                    $e_validation = "";
+                    if (1 == $e) {
+                        $e_validation = "nested required-entry";
+                    }
+                ?>
+                    <div class="radio_button">                      
+                        <input id="email_template_<?php /* @noEscape */ echo $e;?>" type="radio" name="gc_template"
+                        class="gc_design_template <?php /* @noEscape */ echo $e_validation; ?>"
+                        value="<?php /* @noEscape */ echo $design['gemail_id']; ?>" />
+                        <label for="email_template_<?php /* @noEscape */ echo $e;?>"
+                        class="gc-product-form-options__template-option">
+                            <img class="gc-product-form-options__template-image"
+                            src="<?php /* @noEscape */ echo $design['image_path'];?>" alt="">
+                        </label>
+                    </div>
+                    
+                <?php
+                } ?>
+                <div id="gc_template-error" class="mage-error" for="gc_template" generated="true"
+                style="display: none;">This is a required field.</div>
+            </div>
+            
+            <?php if ($_helper->canChangeImage()) { ?>
+            <div class="field">         
+                <label class="label fromto" for="">
+                    <span><?php /* @noEscape */ echo __('Upload your custom image to replace template image') ?></span>
+                </label>
+                <?php /* @noEscape */ echo $_helper->getMaxImageSize(); ?>
+                <div class="image image-placeholder" 
+                        data-mage-init='{
+                            "Mconnect_Giftcard/js/media-uploader" : {
+                                "maxFileSize": <?php /* @noEscape */ echo $_helper->getMaxImageSize(); ?>,
+                                "maxWidth": 1920,
+                                "maxHeight": 1200
+                            }
+                        }'>
+                    <input class="admin__control-text" name="gc_custom_image" type="hidden" data-form-part="product_form" />
+                    <div id="image" class="uploader gc_image_uploader">
+                        <div class="fileinput-button form-buttons button">                          
+                            <input id="fileupload" type="file" name="image"
+                            data-url="<?php /* @noEscape */ echo $block->getUrl('giftcard/catalog/product_upload') ?>" />
+                            <span class="drag-drop"><?php /* @noEscape */ echo __('Drag & Drop File');?></span>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="product-image-wrapper">
+                            <p class="image-placeholder-text">Browse to find or drag image here</p>
+                        </div>
+                    </div>
+                    
+                    <script id="image-template" type="text/x-magento-template" data-template="image">
+                        <div class="item<% if (data.disabled == 1) { %> hidden-for-front<% } %>" data-role="image">
+                            
+                            <div class="giftcard-image-wrapper">
+                                <img class="product-image"
+                                     data-role="image-element"
+                                     src="<%- data.url %>"
+                                     alt="<%- data.label %>"/>
+
+                                <div class="actions">
+                                    <button type="button"
+                                            class="action-remove"
+                                            data-role="delete-button"
+                                            title="Delete image">
+                                    <span>Delete image</span>
+                                    </button>                   
+                                </div>                          
+                            </div>
+                        </div>
+                    </script>
+                    
+                    <div class="loading-mask" data-role="loader" style="display:none;">
+                        <div class="loader">
+                            <img src="<?php /* @noEscape */
+                            echo $this->getViewFileUrl('Mconnect_Giftcard::images/gc_loading.gif'); ?>">
+                            <p><?php /* @noEscape */ echo __('Please wait...');?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <?php } ?>
+            
+        </div>
+    </fieldset>
+<?php } ?>
+
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span class="gc-product-form-options__step-number"><?php /* @noEscape */ echo ++$step;?></span>
+            <span><?php /* @noEscape */ echo __('Compose your email') ?></span>
+        </legend>
+        <div>
+            <div class="email fromto">
+                <div class="fieldset">
+                    <div class="field required gc-product-form-options__fromto">
+                        <label class="label fromto" for="gc_recipient_name">
+                            <span><?php /* @noEscape */ echo __('To') ?></span>
+                        </label>
+
+                        <div class="control fromto-name">
+                            <input name="gc_recipient_name" placeholder="<?php /* @noEscape */
+                            echo __('Recipient Name') ?>" class="required-entry input-text" value=""
+                            aria-required="true" type="text">
+                        </div>
+
+                        <?php if ($card_type != \Mconnect\Giftcard\Model\Product\Attribute\Source\CardType::PHYSICAL) { ?>
+                        <div class="control fromto-email gc-product-form-options__email">
+                            <input name="gc_recipient_email" placeholder="<?php /* @noEscape */
+                            echo __('Recipient Email') ?>" class="required-entry input-text validate-email" value=""
+                            aria-required="true" type="text">
+                        </div>
+                        <?php } ?>
+                    </div>
+
+                    <div class="field required gc-product-form-options__fromto" >
+                        <label class="label fromto" for="gc_recipient_name">
+                            <span><?php /* @noEscape */ echo __('From') ?></span>
+                        </label>
+
+                        <div class="control fromto-name">
+                            <input name="gc_sender_name" placeholder="<?php /* @noEscape */ echo __('Sender Name') ?>"
+                            class="required-entry input-text" value="" aria-required="true" type="text">
+                        </div>
+
+                        <?php if ($card_type != \Mconnect\Giftcard\Model\Product\Attribute\Source\CardType::PHYSICAL) { ?>
+                        <div class="control fromto-email gc-product-form-options__email">
+                            <input name="gc_sender_email" placeholder="<?php /* @noEscape */
+                            echo __('Sender Email') ?>" class="required-entry input-text validate-email"
+                            value="" aria-required="true" type="text">
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+
+            <?php if ($allow_message == 1) { ?>
+                <div class="email body gc-product-form-options__email-content">
+                    <div class="fieldset">
+                        <div class="field gc-product-form-options__field-full-width">
+                            <label class="label" for="gc_headline">
+                                <span><?php /* @noEscape */ echo __('Headline') ?></span>
+                            </label>
+
+                            <div class="control headline">
+                                <input name="gc_headline" placeholder="<?php /* @noEscape */
+                                echo __('Enter your headline here (optional)') ?>" class="input-text"
+                                value="" type="text">
+                            </div>
+                        </div>
+
+                        <div class="field gc-product-form-options__field-full-width">
+                            <label class="label" for="gc_message">
+                                <span><?php /* @noEscape */ echo __('Message') ?></span>
+                            </label>
+
+                            <div class="control message">
+                                <textarea name="gc_message" placeholder="<?php /* @noEscape */
+                                echo __('Enter your gift card message here (optional)') ?>" class="input-text"
+                                cols="5" rows="5" maxlength="<?php /* @noEscape */ echo $max_msg_length;?>" >
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            
+        </div>
+    </fieldset>
+    
+    <?php if ($_helper->getAllowDeliveryDate()) { ?>
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span class="gc-product-form-options__step-number"><?php /* @noEscape */ echo ++$step;?></span>
+            <span><?php /* @noEscape */ echo __('Date to send') ?></span>
+        </legend>
+        <div class="field gc-product-form-options__field-full-width" style="max-width: 200px;">
+            <label class="label" for="day_to_send">
+                <span><?php /* @noEscape */ echo __('Day to send');?></span>
+            </label>
+            <div class="fieldset">                  
+                <input class="input-text validate-date form-control" name="day_to_send" id="day_to_send"
+                value="" type="text" style="max-width: 160px; margin-right: 5px;">
+                <script>
+                     require([
+                          "jquery",
+                          "mage/calendar"
+                     ], function($){
+                         $("#day_to_send").calendar({
+                                "showOn": "both",
+                                "buttonText":"<?php /* @noEscape */ echo __('Select Date') ?>",
+                                "minDate": '+0d',
+                                "buttonImage": null,
+                                "buttonText": "Select Date",
+                                "disabled": null,
+                                "changeMonth": true,
+                                "changeYear": true,
+                                "closeText": "Close",
+                                "showButtonPanel": true
+                         });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="field gc-product-form-options__field-full-width">
+            <label class="label" for="day_to_send">
+                <span><?php /* @noEscape */ echo __('Time Zone');?></span>
+            </label>
+            <div class="fieldset">                  
+                <?php $timezones = $_helper->getTimezones();
+                $site_timezone = $_helper->getSiteTimezone();
+                ?>
+                <select id="time_zone" name="time_zone">
+                    <?php foreach ($timezones as $timezone) { ?>
+                        <option value="<?php /* @noEscape */ echo $timezone['value'];?>"
+                            <?php
+                            if ($site_timezone == $timezone['value']) {
+                                /* @noEscape */ echo "selected='true'";
+                            } ?> >
+                            <?php /* @noEscape */ echo $timezone['label']?>
+                        </option>
+                    <?php } ?>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <?php } ?>
+    
+    <?php if ($_helper->isPreviewCard() &&
+        $card_type != \Mconnect\Giftcard\Model\Product\Attribute\Source\CardType::PHYSICAL) { ?>
+        <fieldset class="fieldset">
+            <div class="field gc-product-form-options__field-full-width">
+            
+                <div class="gc-product-form-options__preview">
+                    <button type="button" class="action" 
+                    data-mage-init='{
+                        "Mconnect_Giftcard/js/preview-card" : {
+                            "url": "<?php /* @noEscape */ echo $block->getUrl('giftcard/catalog/product_preview') ?>",
+                            "loaderurl": "<?php /* @noEscape */ echo $block->getViewFileUrl(
+                                'Mconnect_Giftcard::images/gc_loading.gif'
+                            ); ?>"
+                        }
+                    }'><?php /* @noEscape */ echo __('Preview') ?></button>
+                </div>
+            
+            </div>
+        </fieldset>
+    <?php } ?>
+</div>
+
+<script>
+require([
+    'giftcard'
+], function ($) {
+    
+});
+</script>

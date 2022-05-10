@@ -1,0 +1,7 @@
+<?php 
+
+$productId=100;
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $StockState = $objectManager->get('\Magento\CatalogInventory\Api\StockStateInterface');
+    echo $StockState->getStockQty($productId);
+?>

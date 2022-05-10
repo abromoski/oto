@@ -1,0 +1,8 @@
+<!-- ko if: isDisplayedGiftcodediscountTotal() -->
+<tr class="totals coupon-discount excl">
+   <th class="mark" colspan="1" scope="row" data-bind="text: title"></th>
+   <td class="amount">
+       <span class="price" data-bind="text: getGiftcodediscountTotal(), attr: {'data-th': title}"></span>
+   </td>
+</tr>
+<!-- /ko -->

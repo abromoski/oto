@@ -1,0 +1,18 @@
+<!--@subject {{trans "Your Giftcode Expiration Notification" store_name=$store.getFrontendName()}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <p class="greeting">Hello {{var recipient_name|escape}},</p>
+            <p>Your Giftcode {{var giftcode|escape}}, is being expired on {{var expiry_date|escape}} .</p>
+			<p>Available balance: {{var balance|escape}}</p>
+            <p>
+               Please use it before it get expired. <a href="{{store url=''}}" style="border-radius: 4px; color: #ffffff; display: inline-block; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; line-height: 50px; text-align: center; text-decoration: none; width: 200px; -webkit-text-size-adjust: none; background: #1fc064; margin: 0; padding: 0;">Shop Now</a> 
+            </p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

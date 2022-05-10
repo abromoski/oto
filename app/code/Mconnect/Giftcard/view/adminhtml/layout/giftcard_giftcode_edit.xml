@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+    </head>
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Mconnect\Giftcard\Block\Adminhtml\Giftcode\Edit" name="giftcard_giftcode_edit" ifconfig="giftcard/general/enable" />
+			<block class="Mconnect\Giftcard\Block\Adminhtml\Giftcode\Edit\Order" name="giftcard_giftcode_edit_order" ifconfig="giftcard/general/enable" />
+        </referenceContainer>
+    </body>
+</page>

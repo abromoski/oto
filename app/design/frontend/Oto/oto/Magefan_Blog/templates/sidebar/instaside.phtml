@@ -1,0 +1,109 @@
+                    <div class="otomoment standard"> 
+                      
+                           
+       <h1>#otomoment</h1>
+    <p class="text-center">Have you found your space? <a href="https://www.instagram.com/oto_cbd/">Share</a> your #otomonent with us</p>
+                                            
+                                            <div id="instafeed" class="row justify-content-md-center ">
+                                                <div id="instafeed-gallery-feed" class="owl-carousel owl-theme gallery col-md-9 no-gutter justify-content-md-center ">
+                                                
+                </div>                              
+</div>
+                        </div>
+   
+   
+        
+         <script> 
+    
+ require(["instafeed"], function(Instafeed){   
+    
+var galleryFeed = new Instafeed({
+  get: "user",
+  userId: '10216179470',
+    clientId: 'fc6676be31264e96acf4467974d85fdd',
+    accessToken: '10216179470.1677ed0.38b44b1487bc41d392ea0a53789bbee2',
+  resolution: "standard_resolution",
+  useHttp: "true",
+  limit: 10,
+  template: '<div class="photo-box"><div class="image-wrap"><a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a></div></div>',
+    filter: function(image) {
+  return image.tags.indexOf('otox') <0 ;
+}
+,
+  target: "instafeed-gallery-feed",
+  after: function() {
+    // disable button if no more results to load
+    if (!this.hasNext()) {
+      btnInstafeedLoad.setAttribute('disabled', 'disabled');
+    }
+    
+      jQuery(document).ready(function($) {
+    var owl = $(".owl-carousel"),
+        owlSlideSpeed = 300;
+      });
+    // init owl    
+     
+ (function  () {
+      require(["jquery","owl"],function($) { 
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel({
+                  
+        loop:true,
+        margin:10,
+        nav:true,
+       responsive:{
+          0:{
+            items:1
+          },
+          200:{
+            items:1
+          },
+          400:{
+            items:1
+          },
+          768:{
+            items:2,
+             
+          },
+            992:{
+            items:6,
+             
+          }
+            
+        } 
+                });
+            });
+       });
+    })
+      
+      ();
+
+    // keyboard controls
+ /*  JQuery(document.documentElement).keydown(function(event) {
+      if (event.keyCode == 37) {
+        owl.trigger('prev.owl.carousel', [owlSlideSpeed]);
+      }
+      else if (event.keyCode == 39) {
+        owl.trigger('next.owl.carousel', [owlSlideSpeed]);
+      }
+    }); */
+      
+    
+      
+  }
+});
+    
+    
+
+galleryFeed.run();
+/*
+var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
+btnInstafeedLoad.addEventListener("click", function() {
+  galleryFeed.next()
+}); */
+
+
+ });  
+</script>
+
+            

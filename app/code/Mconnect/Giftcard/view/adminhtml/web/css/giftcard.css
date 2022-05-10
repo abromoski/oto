@@ -1,0 +1,44 @@
+.image-placeholder .giftcard-image-wrapper {
+    border: 1px solid #ccc;
+    height: 150px;
+    position: absolute;
+    width: 150px;
+}
+.giftcard-giftcode-new #gifcode_base_fieldset, .giftcard-giftcode-edit #gifcode_base_fieldset {
+    background: #f1f1f1 none repeat scroll 0 0;
+    float: left;
+    padding: 3rem;
+    width: calc(100% * 0.5 - 30px);
+}
+.giftcard-giftcode-new .fieldset > .legend, .giftcard-giftcode-edit .fieldset > .legend {
+    border-bottom: 1px solid #cac3b4;
+}
+.giftcard-giftcode-new .fieldset > .legend span, .giftcard-giftcode-edit .fieldset > .legend span {
+    display: inline-block;
+    padding: 7px 0 10px;
+}
+.giftcard-giftcode-new #gifcode_base_fieldset.fieldset .field-giftcode .control-value,
+.giftcard-giftcode-edit #gifcode_base_fieldset.fieldset .field-giftcode .control-value {
+    font-weight: 600;
+}
+.giftcard-giftcode-new .control .control-value, .giftcard-giftcode-edit .control .control-value {
+    display: inline-block;
+    padding: 6px 0 0;
+    vertical-align: top;
+}
+.giftcard-giftcode-new .admin__field-label span, .giftcard-giftcode-edit .admin__field-label span {
+    font-weight: 400;
+}
+
+.giftcard-giftcode-new #gifcode_sender_fieldset.fieldset, .giftcard-giftcode-edit #gifcode_sender_fieldset.fieldset {
+    float: right;
+    padding: 3rem 3rem 3rem 0rem;
+    width: calc(100% * 0.5 - 30px);
+}
+#gifcode_sender_fieldset.admin__fieldset > .admin__field > .admin__field-control {
+    width: calc(100% * 0.7 - 30px);
+}
+.giftcard-giftcode-new #gifcode_recipient_fieldset.fieldset, .giftcard-giftcode-edit #gifcode_recipient_fieldset.fieldset {
+    clear: both;
+    padding-top: 3rem;
+}

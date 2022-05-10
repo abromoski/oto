@@ -1,0 +1,90 @@
+<?php
+
+
+
+$product = $block->getProduct();
+$firstPriceAmt = $product->getPriceInfo()->getPrice('regular_price')->getValue();
+
+$finalPriceInt = $product->getPriceInfo()->getPrice('final_price')->getValue();
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+
+// Instance of Pricing Helper
+
+$priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data'); 
+
+$firstPriceAmt= $priceHelper->currency($product->getPrice(), true, false); 
+$finalPriceAmt= $priceHelper->currency($product->getFinalPrice(), true, false); 
+$klarnaprice = (number_format($finalPriceInt /3,2));
+
+$moment = $product->getAttributeText('moment_select');
+$sku = $product->getSku();
+
+?>
+
+<div class="row price-trusrpilot  flex-column-reverse flex-md-row">
+  <div class="col-md-2 price ">
+
+
+    <?php if ($firstPriceAmt == $finalPriceAmt): ?>
+
+    <p class="pricemoment "><?php echo $firstPriceAmt ?> </p>
+
+
+
+    <?php else :?>
+
+    <p class="pricemoment small"><span class="was">Usually</span><br /><?php echo $firstPriceAmt ?> </p>
+    <p class="pricemoment large"><span class="now">Now</span><br /><?php echo $finalPriceAmt ?> </p>
+   
+    <?php endif; ?>
+
+  </div>
+
+
+  <div class="col-md-10 trust-pilot-widget ">
+
+
+<!-- TrustBox widget - Product Mini MultiSource -->
+<div class="trustpilot-widget" data-locale="en-GB" data-template-id="577258fb31f02306e4e3aaf9" data-businessunit-id="5d41beda58361a0001deda01" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="<?php echo $sku;?>" data-star-color="#00b67a" data-font-family="Montserrat"  data-no-reviews="hide" data-scroll-to-list="true">
+  <a href="https://uk.trustpilot.com/review/otocbd.com" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
+  </div>
+</div>
+
+
+
+
+
+<div class="row klarnaproduct">
+
+    <div class="col-12 klarna-box">
+            <p class="klarna-product"> <img src ="/media/wysiwyg/megamenu/icon_plugin_xs.png" alt="klarna" style="height:14px;width:auto;margin-right:4px"> Make 3 payments of &pound; <?php echo $klarnaprice ?>. No Fees. <a href="#" onclick="kmerchant.openHostedInterstitial({ url: 'https://eu-assets.klarnaservices.com/learn-more/index.html?showButtons=true&amp;showBackground=false#eyJ0aWVySWQiOjg4MjA4MywibGFuZ3VhZ2UiOiJFTiIsImNvdW50cnkiOiJHQiIsInB1cmNoYXNlQW1vdW50Ijo1MTAwLCJpc1RocmVzaG9sZCI6ZmFsc2UsInBheW1lbnRNZXRob2RJZCI6OSwidHJhY2tlclBhcmFtZXRlcnMiOnsiYiI6InlnZnNWeHFFaFVkRzFPNVR2SXRDOSIsImYiOiI2IiwiaCI6IkVOIiwiaSI6IkdCIiwiaiI6ImEyMzAwMjk0LTU0MDMtNDRjNi1hYTE1LTNjZmZkYzkyOWYwNiIsImsiOiI5YjU5YmM0MS1jN2I2LTRhOWEtODljNy0zY2ViMWY3ODg5NzQiLCJsIjoiMjEwOCIsIm4iOiJ1ay5vdG9jYmQuY29tIiwicyI6IjEwMDQiLCJkIjoiY3JlZGl0LXByb21vdGlvbi1zdGFuZGFyZCIsImciOiJmZDA5MDYxMS00NjMyLTU5MDUtYjA4OC1lZWZhZjQ3MTlmNmYiLCJhYSI6NTEwMH0sInRpZXJIYXNoIjoiN2M4ZGFiODA1ZTBjYzY4NmQ4MjUyYTQxNWM2ZTU1YjE2ZGNkM2ZmYTdjMjZhNzM5YjQ2YjM5OTExYzU0NmQ2NSIsImNsaWVudElkIjoiZmQwOTA2MTEtNDYzMi01OTA1LWIwODgtZWVmYWY0NzE5ZjZmIn0=' }, arguments, undefined, this);return false;">Learn more</a>   
+    </div>
+
+</div>
+
+<style>
+  .klarna-product img {height:20px;width:auto}
+p.pricemoment{font-size:1.6rem}
+.pricemoment.small{font-size:1rem}
+.pricemoment.large{font-size:1.6rem}
+.trust-pilot-widget{text-align:center;align-items: center;
+  display: flex;}
+
+@media only screen and (max-width: 767px) {
+.price, .trust-pilot-widget, .klarna-product{text-align: center;margin-bottom: 2rem;
+}
+}
+@media only screen and (min-width: 768px) {
+  .trust-pilot-widget {
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  padding-top:3px
+}
+.klarnaproduct{margin-top:20px;}
+
+}
+  </style>

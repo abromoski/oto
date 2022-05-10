@@ -1,0 +1,402 @@
+
+
+.videoContainer{width:100vw;}
+#pause-button.player-button {
+    font-size:20px;
+}
+.player-button .material-icons{
+    font-size:24px;
+}
+
+
+
+.curtain {
+    width: 100%; /* Ensures the component is the full screen width */
+    height: 100vh; /* We're using this for demo purposes */
+    overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+  }
+.amplify-the-silence .curtain{
+	 height: 200px;
+	
+}    
+
+
+  .curtain__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+.video-control{
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:500;
+	
+	
+}
+        
+  .curtain__panel {
+    background:black;
+    width: 50%; /* Each panel takes up half the container */
+    height: 100vh; /* Used for demo purposes */
+    float: left; /* Makes sure panels are side-by-side */
+    position: relative; /* Needed to define the z-index */
+    z-index: 2; /* Places the panels in front of the prize */
+    transition: all 1s ease-out; /* Animates the sliding transition */
+  }
+  
+  .curtain__panel--left {
+    /* Styles for sliding the left panel */
+    background-image: url('../images/logo-left.png');
+    background-repeat: no-repeat;
+    background-position: right center; 
+    background-size: 50% auto;
+  }
+  
+  .curtain__panel--right {
+    /* Styles for sliding the right panel */
+
+    background-image: url('../images/logo-right.png');
+    background-repeat: no-repeat;
+    background-position: left center; 
+    background-size: 50% auto;
+  }
+    
+  .curtain__prize {
+    background: black;
+    position: absolute; /* Forces the prize position into the container start */
+    z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    overflow: hidden;
+  }
+
+ .videoContainer input[type=checkbox] {
+    position: absolute; /* Force the checkbox at the start of the container */
+    cursor: pointer; /* Indicate the curtain is clickable */
+    width: 100%; /* The checkbox is as wide as the component */
+    height: 100%; /* The checkbox is as tall as the component */
+    z-index: 100; /* Make sure the checkbox is on top of everything else */
+    opacity: 0; /* Hide the checkbox */
+    top:0;
+    left:0;
+	  display:none;
+		
+  }
+
+
+  /* Slide the first panel in */
+input[type=checkbox]:checked ~ div.curtain__panel--left {
+    transform: translateX(0);
+   background-color:black;
+
+}
+  
+          
+  /* Slide the second panel in */
+  input[type=checkbox]:checked ~ div.curtain__panel--right {
+      transform: translateX(0);
+      background-color:black;
+    
+  }
+
+  /* Slide the panel to the left out of the container */
+.curtain__panel--left {
+    transform: translateX(-36%);
+    background-color: transparent;
+  }
+  
+  /* Slide the panel to the right out of the container */
+  .curtain__panel--right {
+    transform: translateX(36%);
+    background-color: transparent;
+  }
+
+
+
+  .video-wrapper{
+      /*margin-left:auto;
+      margin-right:auto;
+      width:100%;
+      position:relative;
+      overflow:hidden;*/
+position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+
+  }
+
+  .video-wrapper video{
+
+min-width:100%;
+min-height:100%;
+
+  
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+  
+@media screen and  (min-width:769px){
+  .video-wrapper video {
+    height:100%;
+    width:auto;
+  }
+}
+
+
+
+
+@media screen and (min-aspect-ratio: 16/10) and (min-width:769px){
+  .video-wrapper video {
+    height:100%;
+    width:auto;
+  }
+}
+
+@media screen and (min-aspect-ratio: 16/9) and (min-width:769px){
+  .video-wrapper video {
+    width:100%;
+    height:auto;
+  }
+}
+
+
+@media screen and (max-width:767px){
+  .video-wrapper video {
+    max-width:100%;
+    height:auto;
+  }
+    
+    #mute-button{
+		display: none;
+	
+	}
+	
+	#unmute-button{
+		
+		display: inline-block;
+	}
+	
+    .player-button {
+    font-size:16px;
+}
+.player-button .material-icons{
+    font-size:36px;
+}
+}
+
+
+
+
+
+
+
+.video-navigation-position, .video-down-position {
+position:absolute;
+    
+    transform:translateY(-100%);
+/*margin:0 50%;*/
+color:white;
+border:white;
+left: 0;
+right: 0;
+
+margin: auto;
+margin-left:-40px;
+
+z-index:1000;
+}
+
+.video-down-position {
+
+    top:95vh;
+}
+
+.video-button-position {
+position:absolute;
+    
+   /* transform:translateY(-100%);*/
+/*margin:0 50%;*/
+color:white;
+border:white;
+
+right: 3vw;
+
+margin: auto;
+margin-left:-40px;
+
+z-index:1000;
+
+
+
+bottom:3vh;
+bottom: calc(3vh + 40px);
+
+}
+
+
+
+
+
+ul {
+ list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+background:none;
+}
+
+ul#video-bar{
+border-radius: 25px;
+background:transparent;
+padding: 5px 0 0 0;
+opacity:0.9;
+}
+
+ ul#video-bar li{
+
+
+}
+ ul#video-nav li{
+display:inline-block;
+float:none;
+
+}
+#video-menu-bar{
+text-align:center;
+}
+   
+
+ /* position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -104.5px;*/ /*104.5px is half of the button's width*/
+
+
+
+
+#unmute-button, #pause-button{
+display:inline-block;
+
+}
+
+#mute-button, #play-button{
+display:none;
+
+}
+
+
+
+
+
+.player-button{
+border-style:none;
+color:white;
+
+}
+
+
+
+
+#scroll-down.player-button{
+
+ 
+    color:rgb(128, 181, 181);
+color:white;
+       
+}
+
+#scroll-down.player-button:hover, #scroll-down.player-button:focus{
+
+color:rgb(117, 172, 177);
+-webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+background:none;
+border:none;
+
+
+}
+
+.player-button button{
+	font-size:16px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	
+}
+
+#video-menu-bar-side .player-button:hover, #video-menu-bar-side .player-button:focus, #video-menu-bar-side .player-button:active{
+
+-webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+background-color:transparent;
+border:none;
+
+}
+
+#video-nav .video-button{
+background:black;
+font-size:18px
+
+}
+#video-nav .video-button:hover, #video-nav .video-button:focus{
+background:orange;
+
+}
+
+
+
+.video-button{
+border-color:white;
+color:white;
+width:300px;
+font-size:18px;
+
+}
+
+button.video-button:hover{
+border-width:2px;
+border-color:white;
+}
+
+
+
+
+.video-navigation-position{
+top:85vh;
+}
+
+.video-down-position{
+top:95vh;
+}
+
+ul.video-navigation-position li button{
+font-size:10px;
+padding:5px 10px;
+width:200px;
+}
+
+.player-button, .down-button{
+padding:0 5px;
+}
+
+
+
+
+
+

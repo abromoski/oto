@@ -1,0 +1,96 @@
+<?php
+$_product = $block->getProduct(); // GET THE PRODUCT
+ $moment = $_product->getAttributeText('moment_select');
+$momentclass="";
+if ($moment=="Focus"){
+    $momentclass="focus";
+}
+if ($moment=="Amplify"){
+     $momentclass="amplify";
+}
+if ($moment=="Balance"){
+     $momentclass="balance";
+}
+
+$type = $_product->getAttributeText('type_of_product');
+$typeproduct="";
+if ($type=="roll-ons"){
+    $typeproduct="1600MG CBD per 8ML";
+}
+if ($type=="bitters"){
+    $typeproduct="2500MG CBD per 100ML";
+
+}
+
+if ($type=="pillow-mist"){
+    $typeproduct="2400MG CBD per 8ML";
+
+}
+
+?>
+
+        
+
+
+<div class="col product-share">
+ 
+                             
+ <ul class="social-network social-circle">
+                        <!--li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>-->
+                   <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"   class="icoFacebook" ><i class="fa fa-facebook"></i></a></li>
+                       
+                           <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;" class="icoLinkedin" ><i class="fa fa-linkedin"></i></a></li>
+                        <li><a title="Share on Twitter" class="icoTwitter"  onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;" >
+                              <i class="fa fa-twitter"></i></a></li>
+                    </ul>	
+        
+   
+  </div>
+<div class="product-base-button">
+
+   <div class="product-description-base <?php echo $momentclass ?>">
+                                    <div class="row ">
+                                        <div class="col-xs-4 ">
+                                            <div class="oto-strength">
+                                                <div class="oto-strength-disc">
+                                                        <ul class="rating product">
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle"></li>
+                                                                <li class="fa fa-circle-thin"></li>
+                                                                <li class="fa fa-circle-thin"></li>
+                                                                <li class="fa fa-circle-thin"></li>
+                                                            </ul>
+                                                </div>
+                                                <div class="oto-strength-text">
+                                                <p>Oto Strength</p>
+                                               
+                                            </div>
+                                        
+                                    </div>
+
+                                </div>
+                                        <div class="col-xs-4 vertical-align product-middle-column">
+                                            <img src="<?php 
+ 
+
+    echo $this->getViewFileUrl('images/product-bell-curve-'.$momentclass.'.png');
+                                    ?>"<?php echo $momentclass ?> alt=" bell curve">
+                                                       
+                                      
+                                        </div>
+                                       
+                                            <div class="col-xs-4 vertical-align product-last-column"><p><?php echo $typeproduct ?></p></div>
+
+                                       
+
+
+
+                            </div>
+
+                         
+                                    </div>

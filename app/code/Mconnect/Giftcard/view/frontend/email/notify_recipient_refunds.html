@@ -1,0 +1,14 @@
+<!--@subject {{trans "buyer of Giftcode has beed refunded" store_name=$store.getFrontendName()}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr class="email-intro">
+        <td>
+			<p class="greeting">Hello {{var recipient_name|escape}},</p>
+            <p>Your Giftcode {{var giftcode|escape}}; is being Inactivated, because {{var sender_name|escape}} is getting refunded for it.</p>			
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

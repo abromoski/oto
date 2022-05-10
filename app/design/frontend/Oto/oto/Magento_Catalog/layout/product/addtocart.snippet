@@ -1,0 +1,22 @@
+    <?php /* @escapeNotVerified */ echo str_replace(".00","",$block->getProductPrice($_product)); ?>
+                            <div class="actions-primary"<?= strpos($pos, $viewMode . '-primary') ? $position : '' ?>>
+                                    <?php if ($_product->isSaleable()): ?>
+                                        <?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                                        <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?= /* @NoEscape */ $postParams['action'] ?>" method="post">
+                                            <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $postParams['data']['product'] ?>">
+                                            <input type="hidden" name="<?= /* @escapeNotVerified */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @escapeNotVerified */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+                                            <?= $block->getBlockHtml('formkey') ?>
+                                            <button type="submit"
+                                                    title="<?= $block->escapeHtml(__('Add to Bag')) ?>"
+                                                    class="action tocart primary">
+                                                <span><?= /* @escapeNotVerified */ __('Add to Bag') ?></span>
+                                            </button>
+                                        </form>
+                                    <?php else: ?>
+                                        <?php if ($_product->isAvailable()): ?>
+                                            <div class="stock available"><span><?= /* @escapeNotVerified */ __('In stock') ?></span></div>
+                                        <?php else: ?>
+                                            <div class="stock unavailable"><span><?= /* @escapeNotVerified */ __('Out of stock') ?></span></div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>

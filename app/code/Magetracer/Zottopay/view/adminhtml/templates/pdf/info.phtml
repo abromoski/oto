@@ -1,0 +1,15 @@
+<?php
+/**
+ * Copyright © 2016 Magetracer Design. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/**
+ * @var $block \Magetracer\Zottopay\Block\Info
+ */
+?>
+<?php echo $this->escapeHtml($block->getMethod()->getTitle()) ?>
+    {{pdf_row_separator}}
+<?php echo __('Zottopay Transaction ID: %1', $this->escapeHtml($block->getInfo()->getLastTransId())) ?>
+    {{pdf_row_separator}}

@@ -1,0 +1,45 @@
+<?php if (!empty($block->getBanner())) : ?>
+<div class="banner">
+    <div class="banner_slider">
+        <?php  foreach ($block->getBanner() as $banner) : ?>
+        <div>
+            <?php if ($banner->getCallToAction() != "") :?>
+                <!-- <a href="<?php echo $banner->getCallToAction()?>"> -->
+            <?php endif;?>
+            <div class="thumb">
+                <img src="<?php echo $block->getMediaPath().$banner->getBannerImage(); ?>" alt="banner">
+            </div>
+            <?php if ($banner->getCallToAction() != "") :?>
+                <!-- </a> -->
+            <?php endif;?>
+            <?php if ($banner->getBannerDescription() != "" || $banner->getBannerTitle() != "") :?>
+                <div class="caption">
+                    <div class="title">
+                        <div class="container">
+                            <?php if ($banner->getBannerTitle() != "") :?>
+                            <h2><?php echo $banner->getBannerTitle(); ?></h2>
+                            <?php endif; ?>
+                        <?php if ($banner->getBannerDescription() != "") :?>
+                            <?php echo $banner->getBannerDescription(); ?>
+                        <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php if ($banner->getLabelButtontext() != "") : ?>
+                    <div class="container">
+                        <a href="<?php echo $banner->getCallToAction()?>" class="btn btn-md btn-banner"><?php echo $banner->getLabelButtontext()?></a>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif;?>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Etatvasoft_Banner/js/banner-slider": {}
+    }
+}
+</script>
+<?php endif; ?>

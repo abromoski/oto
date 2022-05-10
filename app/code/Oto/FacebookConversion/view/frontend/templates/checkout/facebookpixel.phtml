@@ -1,0 +1,11 @@
+<?php
+$order = $this->getOrder();
+$pixelValue = number_format($order->getBaseGrandTotal(),2);
+$pixelCurrency = $order->getOrderCurrencyCode();
+
+<script>
+fbq('track', 'Purchase', {
+  value: <?php echo $pixelValue;?>,
+  currency: '<?php echo $pixelCurrency;?>'
+});
+</script>

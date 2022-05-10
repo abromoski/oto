@@ -1,0 +1,102 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Amp
+ * @copyright   Copyright (c) 2019 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+<?php
+/** @var Plumrocket\Amp\Block\Page\Html\Header\Menu\Right $block */
+
+/** @var \Plumrocket\Amp\Helper\Data $helperAmp */
+$helperAmp = $this->helper(\Plumrocket\Amp\Helper\Data::class);
+/** @var \Magento\Checkout\Helper\Cart $helperCart */
+$helperCart = $this->helper(\Magento\Checkout\Helper\Cart::class);
+
+// Magento FPC will cache cart count
+// If add attribute "cacheable", all page be uncacheable
+$cartSummaryQty = null;
+$searchMode = ! $helperAmp->isEnabledHeaderSearch() ? 'icon' : 'form';
+$searchMode = $helperAmp->isSearchEnabled()
+    ? $searchMode
+    : false;
+?>
+<div class="right-top-btn">
+    <?php if ($searchMode === 'icon') : ?>
+        <a href="<?= $block->escapeUrl($this->getUrl('pramp/search/index', ['amp' => 1])) ?>"
+           class="search-icon"
+           title="<?= $block->escapeHtmlAttr(__('Search')) ?>"
+        >
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="90px" height="90px"><path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"/></svg>
+    </a>
+    <?php endif; ?>
+    <?php //echo $block->getChildHtml('amp-authorization-link-login') ?>
+    <a href="<?= $block->escapeUrl($helperCart->getCartUrl()) ?>"
+       class="cart"
+       title="<?= $block->escapeHtmlAttr(__('Cart')) ?>"
+    >
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M447.988,139.696c-0.156-2.084-1.9-3.696-3.988-3.696h-72v-20C372,52.036,319.96,0,256,0S140,52.036,140,116v20H68
+			c-2.088,0-3.832,1.612-3.988,3.696l-28,368c-0.084,1.108,0.296,2.204,1.056,3.02C37.824,511.536,38.888,512,40,512h432
+			c1.112,0,2.176-0.464,2.932-1.28c0.756-0.816,1.14-1.912,1.056-3.02L447.988,139.696z M172,116c0-46.316,37.68-84,84-84
+			s84,37.684,84,84v20H172V116z M156,248c-22.06,0-40-17.944-40-40c0-15.964,8-30.348,24-36.66V208c0,8.824,7.18,16,16,16
+			s16-7.176,16-16v-36.636c16,6.312,24,20.804,24,36.636C196,230.056,178.06,248,156,248z M356,248c-22.06,0-40-17.944-40-40
+			c0-15.964,8-30.348,24-36.66V208c0,8.824,7.18,16,16,16s16-7.176,16-16v-36.636c16,6.312,24,20.804,24,36.636
+			C396,230.056,378.06,248,356,248z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+       
+    <?php if ($cartSummaryQty) : ?>
+            <span id="cart-summary-qty" class="count"><?php echo $cartSummaryQty ?></span>
+        <?php endif; ?>
+       
+    </a>
+</div>
+<?php if ($searchMode === 'form') : ?>
+    <?php echo $block->getChildHtml('amp_catalogsearch_form') ?>
+<?php endif; ?>

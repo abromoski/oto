@@ -1,0 +1,38 @@
+                    <div class="otomoment standard d-none d-lg-block" > 
+                 
+                           
+       <h1>#otomoment</h1>
+    <p class="text-center"><a href="https://www.instagram.com/oto_cbd/">Share</a> your #otomoments with us</p>
+   
+<!--<div id="instafeed" class="instafeed slides">
+                  </div>-->
+                      
+
+                        </div>
+             
+  
+         <script> 
+ require(["instafeed"], function(Instafeed){  
+
+
+
+
+    var userFeed = new Instafeed({
+  get: 'user',
+  userId: '10216179470',
+    clientId: 'fc6676be31264e96acf4467974d85fdd',
+    accessToken: '10216179470.1677ed0.2dac6e6d224e449dabab419218e3a204',
+  resolution: 'standard_resolution',
+                                 template: '<div class="instaside-holder"><a  href="{{link}}" target="_blank" id="{{id}}"><img class="{{orientation}}" src="{{image}}" /></a></div>',
+  sortBy: 'most-recent',
+  limit: 6,
+  links: false
+});
+userFeed.run();
+
+ });
+
+
+</script>
+
+            

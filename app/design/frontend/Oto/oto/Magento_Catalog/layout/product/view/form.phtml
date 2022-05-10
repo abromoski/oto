@@ -1,0 +1,80 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+
+/**
+ * Product view template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php $_helper = $this->helper(Magento\Catalog\Helper\Output::class); ?>
+<?php $_product = $block->getProduct(); ?>
+
+<?php 
+
+ $stockItem = $_product->getExtensionAttributes()->getStockItem()->getQty();
+$stockists = $_product->getData('alternative_stockists');
+$stockistclass="";
+$deliverydate= $_product->getData('dispatch_date_for_backorders');
+if ($deliverydate != '0000-00-00 00:00:00'){
+    $deliverydate =   date("jS F, Y", strtotime($deliverydate));    
+}
+if (($stockItem<1)&&(!empty($stockists))) 
+{
+    $stockistclass="stockist";
+}
+
+if (($stockItem<1)&&(empty($stockists))) 
+{ ?>
+<div class="backorder">
+<p>We're sorry but this item is currently stock. You can pre-order it and it will be dispatched on <?php echo $deliverydate; ?>.</p>
+</div>
+<?php
+}
+?>
+
+<div class="product-add-form <?php echo $stockistclass; ?>">
+    <form data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>"
+          action="<?= $block->escapeUrl($block->getSubmitUrl($_product)) ?>" method="post"
+          id="product_addtocart_form"<?php if ($_product->getOptions()) :?> enctype="multipart/form-data"<?php endif; ?>>
+        <input type="hidden" name="product" value="<?= (int)$_product->getId() ?>" />
+        <input type="hidden" name="selected_configurable_option" value="" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+        <input type="hidden" name="item"  value="<?= (int)$block->getRequest()->getParam('id') ?>" />
+        <?= $block->getBlockHtml('formkey') ?>
+        <?= $block->getChildHtml('form_top') ?>
+        <?php if (!$block->hasOptions()) :?>
+            <?= $block->getChildHtml('product_info_form_content') ?>
+        <?php else :?>
+            <?php if ($_product->isSaleable() && $block->getOptionsContainer() == 'container1') :?>
+                <?= $block->getChildChildHtml('options_container') ?>
+            <?php endif;?>
+        <?php endif; ?>
+
+        <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2') :?>
+            <?= $block->getChildChildHtml('options_container') ?>
+        <?php endif;?>
+        <?= $block->getChildHtml('form_bottom') ?>
+    </form>
+</div>
+<script>
+    require([
+        'jquery',
+        'priceBox'
+    ], function($){
+        var dataPriceBoxSelector = '[data-role=priceBox]',
+            dataProductIdSelector = '[data-product-id=<?= $block->escapeHtml($_product->getId()) ?>]',
+            priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
+
+        priceBoxes = priceBoxes.filter(function(index, elem){
+            return !$(elem).find('.price-from').length;
+        });
+
+        priceBoxes.priceBox({'priceConfig': <?= /* @noEscape */ $block->getJsonConfig() ?>});
+    });
+</script>

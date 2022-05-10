@@ -1,0 +1,154 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Amp
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<?php
+$product = $block->getProduct();
+
+?>
+
+
+
+
+
+<div class="product info detailed ">
+        <?php $layout = $block->getLayout(); ?>
+        <div class="product data items">
+            <amp-accordion id="product-data-tabs">
+            
+
+                    <section  id="section-amp-product-info-description">
+                        <header class="items-block-heading i-amphtml-accordion-header" role="button" aria-controls="amp-product-info-description" aria-expanded="true" tabindex="0">Description</header>
+                        <div class="tab-content i-amphtml-accordion-content" id="amp-product-info-description">
+                            
+<div class="product attribute description ">
+    <strong class="type"></strong>    <div class="value"><?php echo $product->getData('description'); ?></div>
+</div>
+                        </div>
+                    </section>
+
+                    <section  id="section-amp-product-info-howtouse">
+                        <header class="items-block-heading i-amphtml-accordion-header" role="button" aria-controls="amp-product-info-description" aria-expanded="false" tabindex="0">How To Use</header>
+                        <div class="tab-content i-amphtml-accordion-content" id="amp-product-info-howtouse">
+                            
+<div class="product attribute description">
+    <strong class="type"></strong>    <div class="value"><?php echo $product->getData('how_to_use'); ?></div>
+</div>
+                        </div>
+                    </section>
+
+
+
+                    <section  id="section-amp-product-info-producthighlights">
+                        <header class="items-block-heading i-amphtml-accordion-header" role="button" aria-controls="amp-product-info-description" aria-expanded="false" tabindex="0">Why OTO?</header>
+                        <div class="tab-content i-amphtml-accordion-content" id="amp-product-info-producthighlights">
+                            
+                                <div class="product attribute description">
+                                    <strong class="type"></strong>    <div class="value">
+                                    <h4 class="product-highlight-title">CBD</h4>
+                                <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_cbd_descrip'); ?></p>
+                                <h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_1'); ?></h4>
+                                <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_1'); ?></p>
+                                <h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_2'); ?></h4>
+                                <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_2'); ?></p>
+                                <h4 class="product-highlight-title"><?php echo $product->getData('product_highlights_title_3'); ?></h4>
+                                <p class="product-highlight-desc"><?php echo $product->getData('product_highlights_desc_3'); ?></p>
+                                    
+                                    </div>
+                                </div>
+                        </div>
+                    </section>
+
+                    <section  id="section-amp-product-info-whyoto">
+                        <header class="items-block-heading i-amphtml-accordion-header" role="button" aria-controls="amp-product-info-description" aria-expanded="false" tabindex="0">Why OTO?</header>
+                        <div class="tab-content i-amphtml-accordion-content" id="amp-product-info-whyoto">
+                            
+                                    <div class="product attribute description">
+                                        <strong class="type"></strong>    <div class="value">
+                                        <h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_1'); ?></h4>
+                                        <p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_1'); ?></p>
+                                    <h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_2'); ?></h4>
+                                    <p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_2'); ?></p>
+                                    <h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_3'); ?></h4>
+                                    <p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_3'); ?></p>
+                                    <h4 class="product-highlight-title"><?php echo $product->getData('why_oto_title_4'); ?></h4>
+                                    <p class="product-highlight-desc"><?php echo $product->getData('why_oto_desc_4'); ?></p>
+                                        
+                                        
+                                        </div>
+                                    </div>
+                        </div>
+                    </section>
+
+
+
+
+
+                    
+
+
+
+                    <section  id="section-amp-product-info-testimonials">
+                        <header class="items-block-heading i-amphtml-accordion-header" role="button" aria-controls="amp-product-info-description" aria-expanded="false" tabindex="0">Testimonials</header>
+                        <div class="tab-content i-amphtml-accordion-content" id="amp-product-testimonials
+">
+
+                            
+<div class="product attribute description">
+    <strong class="type"></strong>    <div class="value"><?php
+if (!empty($product->getData('testimonial_quote_1'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_1'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_1'); ?></span></p>
+<?php } 
+if (!empty($product->getData('testimonial_quote_2'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_2'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_2'); ?></span></p>
+    <?php } 
+    if (!empty($product->getData('testimonial_quote_3'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_3'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_3'); ?></span></p>
+    <?php } 
+    if (!empty($product->getData('testimonial_quote_4'))) {?>
+    <p class="testimonial-quote">"<?php echo $product->getData('testimonial_quote_4'); ?>" - <span class="testimonial-author"><?php echo $product->getData('testimonial_author_4'); ?></span></p>
+    <?php } ?></div>
+</div>
+                        </div>
+                    </section>
+
+                    <section  id="section-amp-product-info-ingredients">
+                        <header class="items-block-heading i-amphtml-accordion-header" role="button" aria-controls="amp-product-info-description" aria-expanded="false" tabindex="0">Ingredients</header>
+                        <div class="tab-content i-amphtml-accordion-content" id="amp-product-info-ingredients">
+                            
+<div class="product attribute description">
+    <strong class="type"></strong>    <div class="value">
+    
+    <p><?php echo $product->getData('product_ingredients'); ?></p>
+    
+    </div>
+</div>
+                        </div>
+                    </section>
+
+
+
+                    </amp-accordion>
+        </div>
+    </div>
+
+
+
+
+
+
+
